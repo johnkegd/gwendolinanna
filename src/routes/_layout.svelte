@@ -7,7 +7,7 @@
 <style>
 	main {
 		position: relative;
-		background-color: white;
+		background-color: grey;
 		padding: 2em;
 		box-sizing: border-box;
 	}
