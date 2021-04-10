@@ -1,0 +1,15 @@
+<script context="module">
+export async function preload(page, session) {
+    const res = await this.fetch('/gallery.json');
+    const items = await res.json();
+    return {items};
+}
+</script>
+
+<script>
+    export let items;
+    console.log(items);
+    import Gallery from './_Gallery.svelte';
+</script>
+
+<Gallery Items={items}/>
