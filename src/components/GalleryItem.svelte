@@ -16,7 +16,7 @@ export let category;
       <a class="gallery-cover gray">
         <img class="responsive-img" src={image} alt="placeholder">
       </a>
-      <div class="gallery-header">
+      <div class="gallery-header grey darken-2 white-text center">
         <span>{title}</span>
       </div>
       <div class="gallery-body">

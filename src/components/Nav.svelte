@@ -20,6 +20,10 @@ nav ul:not(.indicators) li.active::before {
     background-color: #ffffcc !important;
   }
 
+  .categories-container a{
+	  color: black;
+  }
+
 </style>
 
 <nav class="nav-extended">
@@ -34,6 +38,8 @@ nav ul:not(.indicators) li.active::before {
 				<li class:active={segment === "gallery"}><a rel=prefetch href="gallery">Gallery</a></li>
 				<li class:active={segment === "about"}><a href="about">About</a></li>
 				<li class:active={segment === "blog"}><a href="blog">Blog</a></li>
+				<li><a class='dropdown-trigger' href='#' data-target='feature-dropdown'>Features<i
+					class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
 			  <!-- Dropdown Structure -->
 			  <ul id='feature-dropdown' class='dropdown-content'>
@@ -51,10 +57,12 @@ nav ul:not(.indicators) li.active::before {
 	 <div class="categories-wrapper yellow lighten-4">
 		<div class="categories-container">
 		  <ul class="categories container">
+			{#if segment === "gallery"}
 			<li class="active"><a href="#all">All</a></li>
 			<li><a href="#polygon">Polygon</a></li>
 			<li><a href="#bigbang">Big Bang</a></li>
 			<li><a href="#sacred">Sacred Geometry</a></li>
+			{/if}
 		  </ul>
 		</div>
 	  </div>
