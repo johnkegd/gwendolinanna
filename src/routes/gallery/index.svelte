@@ -8,7 +8,6 @@ export async function preload(page, session) {
 
 <script>
     export let items;
-    console.log(items);
     import Gallery from './_Gallery.svelte';
 </script>
 

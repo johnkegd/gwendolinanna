@@ -13,7 +13,6 @@
 		background-size:20%
 	}
 
-
 </style>
 
 <nav class="nav-extended">
@@ -21,7 +20,7 @@
 		<div class="pattern active" style="background-image: url({background})"></div>
 	</div>
 	  <div class="nav-wrapper container grey-text text-lighten-3">
-			<a href="index.html" class="brand-logo"><img src={logo} with="200" height="300" alt="gwendolin logo"></a>
+			<a href="." class="brand-logo"><img src={logo} with="200" height="300" alt="gwendolin logo"></a>
 			<a href="." data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			<ul class="right hide-on-med-and-down">
 				<li class:active={segment === undefined}><a href=".">Home</a></li>
@@ -53,4 +52,4 @@
 		</div>
 	  </div>
 </nav>
-<SideNav/>
+<SideNav segment={segment}/>
