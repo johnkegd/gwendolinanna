@@ -11,4 +11,8 @@ export async function preload(page, session) {
     import Gallery from './_Gallery.svelte';
 </script>
 
+<svelte:head>
+    <title>Gallery</title>
+</svelte:head>
+
 <Gallery Items={items}/>

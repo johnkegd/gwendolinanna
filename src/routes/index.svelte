@@ -10,7 +10,7 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Gwendolin Home</title>
 </svelte:head>
 
 <h1>Home  Page!</h1>

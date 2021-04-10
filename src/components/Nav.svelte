@@ -12,6 +12,13 @@
 	nav .nav-background .pattern {
 		background-size:20%
 	}
+	nav .brand-logo {
+    left:-15% !important;	
+}
+
+nav ul:not(.indicators) li.active::before {
+    background-color: #ffffcc !important;
+  }
 
 </style>
 
@@ -37,7 +44,7 @@
 		
 			<div class="nav-header center yellow-text text-lighten-4">
 			<h1>I MAKE THINGS</h1>
-			<div class="tagline">Gallery</div>
+			<div class="tagline">{segment != undefined ? segment.toUpperCase() : "HOME"}</div>
 			</div>
 	</div>
 	 <!-- Fixed Masonry Filters -->
