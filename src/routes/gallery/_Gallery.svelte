@@ -1,5 +1,4 @@
 <script>
-import { each } from 'svelte/internal';
 import GalleryItem from '../../components/GalleryItem.svelte';
 export let Items;
 </script>
@@ -7,7 +6,6 @@ export let Items;
  <div id="portfolio" class="section">
     <div class="container">
       <div class="gallery row">
-
         {#each Items as item}
         <GalleryItem 
         title={item.title} 

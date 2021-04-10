@@ -1,61 +1,28 @@
 <script>
 	import SideNav from './SideNav.svelte';
+	import logo from '../node_modules/images/logo-2.svg';
+	import background from '../node_modules/images/stars.svg'
 	export let segment;
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
+	nav a {
 		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
 	}
+	nav .nav-background .pattern {
+		background-size:20%
+	}
+
+
 </style>
 
 <nav class="nav-extended">
 	<div class="nav-background">
-		<div class="pattern active" style="background-image: url('images/stars.svg');background-size:20%"></div>
+		<div class="pattern active" style="background-image: url({background})"></div>
 	</div>
 	  <div class="nav-wrapper container grey-text text-lighten-3">
-			<a href="index.html" class="brand-logo"><img src="" with="200" height="300" alt="gwendolin logo"></a>
-			<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<a href="index.html" class="brand-logo"><img src={logo} with="200" height="300" alt="gwendolin logo"></a>
+			<a href="." data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			<ul class="right hide-on-med-and-down">
 				<li class:active={segment === undefined}><a href=".">Home</a></li>
 				<li class:active={segment === "gallery"}><a rel=prefetch href="gallery">Gallery</a></li>
