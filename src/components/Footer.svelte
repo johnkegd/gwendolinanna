@@ -1,3 +1,19 @@
+<style>
+footer {
+    color: #212121;
+}
+
+.page-footer {
+    background-color: #212121;
+    color: grey;
+}
+.footer-copyright {
+    background-color: #336699;
+    color: #212121;
+}
+</style>
+
+
 <footer class="page-footer">
     <div class="container">
         <div class="row">
