@@ -11,8 +11,8 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+	color: inherit !important;
+	text-decoration: none !important;
 }
 
 a:hover {

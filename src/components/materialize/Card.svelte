@@ -7,15 +7,19 @@
     export let description = "Here is some more information about this product that is only revealed once clicked on.";
 </script>
 
-<div class="card sticky-action">
+<div class="card small sticky-action">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="{image}" alt>
+      <img class="activator responsive-img" src="{image}" alt>
     </div>
     <div class="card-action">
       <span class="card-title activator grey-text text-darken-4">{title}<i class="material-icons right">{icon}</i></span>
+      {#if Array.isArray(links)}
       {#each links as link}
       <p><a href="{link.url}">{link.placeholder}</a></p>
       {/each}
+      {:else}
+      <p><a href="{link.url}">{link.placeholder}</a></p>
+      {/if}
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">{title}<i class="material-icons right">close</i></span>
