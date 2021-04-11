@@ -1,7 +1,7 @@
 [build]
   command = "npm run netlify:build"
   functions = "lambda"
-  publish = "__sapper__/build"
+  publish = "__sapper__/export"
   base = "/"
 
 [functions]
