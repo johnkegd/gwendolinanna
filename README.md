@@ -7,7 +7,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 -->
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/130d3be2-8c37-4304-81e5-ac6b0bae5339/deploy-status)](https://dev-gwendolin.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/130d3be2-8c37-4304-81e5-ac6b0bae5339/deploy-status)](https://gwendolin.netlify.app)
 
 <!-- PROJECT LOGO -->
 <br />
