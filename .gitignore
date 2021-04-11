@@ -5,5 +5,4 @@ yarn-error.log
 /__sapper__/
 .vscode/
 /lambda/
-package-lock.json
 yarn.lock
