@@ -8,11 +8,11 @@ export async function preload(page, session) {
 
 <script>
     export let items;
-    import Gallery from './_Gallery.svelte';
+    import GalleryManager from './_GalleryManager.svelte';
 </script>
 
 <svelte:head>
     <title>Gallery</title>
 </svelte:head>
 
-<Gallery Items={items}/>
+<GalleryManager {items}/>

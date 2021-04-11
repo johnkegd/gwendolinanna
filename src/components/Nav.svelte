@@ -57,7 +57,7 @@ nav ul:not(.indicators) li.active::before {
 				<li class:active={segment === "gallery"}><a rel=prefetch href="gallery">Gallery</a></li>
 				<li class:active={segment === "about"}><a href="about">About</a></li>
 				<li class:active={segment === "blog"}><a href="blog">Blog</a></li>
-				<li><a class='dropdown-trigger' href='#' data-target='feature-dropdown'>Features<i
+				<li><a class='dropdown-trigger' href data-target='feature-dropdown'>Features<i
 					class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
 			  <!-- Dropdown Structure -->

@@ -1,16 +1,16 @@
 <script>
 import GalleryItem from '../../components/GalleryItem.svelte';
-import About from '../about.svelte';
-export let Items;
+export let items;
 </script>
+
  <!-- Gallery -->
  <div id="portfolio" class="section">
-    <div class="container">
+<a href="gallery/create" class="btn waves">Create Card</a>
+  <div class="container">
       <div class="gallery row">
-        {#each Items as item}
+        {#each items as item}
         <GalleryItem {...item}/>
         {/each}
-
       </div>
     </div><!-- /.container -->
   </div>

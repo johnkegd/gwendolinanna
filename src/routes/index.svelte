@@ -7,7 +7,10 @@
 		{title:"hi card 2", description:"hi description 2"},
 		{title:"hi card 3", description:"hi description 3", image:cardImage},
 		{title:"hi card 4", description:"hi description 4"},
+		{title:"hi card 5", description:"hi description 5"},
 	]
+/* 	import ColorManager from '../components/ColorManager.svelte';
+	import Color from '../components/Color.svelte'; */
 </script>
 
 <style>
@@ -22,8 +25,6 @@
 	<title>Gwendolin Home</title>
 </svelte:head>
 
-<h1>Home  Page!</h1>
-<p><strong>here is going to be the landing page.</strong></p>
 <div class="row">
 	{#each Cards as card}
 	<div class="col s4">
@@ -33,3 +34,14 @@
 </div>
 
 
+
+<!--  testing props via children slot
+	
+	<ColorManager let:colors>
+{#each colors as color }
+	<Color {color}/>
+{/each}
+</ColorManager>
+
+
+-->
