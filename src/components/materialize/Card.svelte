@@ -18,7 +18,7 @@
       <p><a href="{link.url}">{link.placeholder}</a></p>
       {/each}
       {:else}
-      <p><a href="{link.url}">{link.placeholder}</a></p>
+      <p><a href=".">deafault link</a></p>
       {/if}
     </div>
     <div class="card-reveal">
