@@ -1,6 +1,6 @@
 [build]
   command = "yarn netlify:build"
   functions = "lambda"
-  publish = "__sapper__/export"
+  publish = "__sapper__/build"
 [functions]
   directory = "functions"
