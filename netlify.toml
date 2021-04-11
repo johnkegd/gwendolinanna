@@ -1,5 +1,5 @@
 [build]
-  command = "npm run netlify:build && npm run start"
+  command = "npm run netlify:build && npm start"
   functions = "lambda"
   publish = "__sapper__/build"
 [functions]
