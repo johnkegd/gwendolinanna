@@ -20,9 +20,28 @@ nav ul:not(.indicators) li.active::before {
     background-color: #ffffcc !important;
   }
 
-  .categories-container a{
-	  color: black;
+  .categories-wrapper {
+    background-color: #212121;
+    color: grey;
   }
+
+.nav-extended {
+	background-color: #212121;
+}
+
+
+.title {
+	color: #0080ff;
+	font-family: "New Century Schoolbook", Baskerville, serif; font-weight: 550; font-style: normal;
+	text-align: right;
+	font-size: 60px;
+}
+.tagline {
+	text-align: right;
+	color: #80bfff;
+	font-size: 22px;
+	font-weight: 600;
+}
 
 </style>
 
@@ -49,12 +68,12 @@ nav ul:not(.indicators) li.active::before {
 			  </ul>
 		
 			<div class="nav-header center yellow-text text-lighten-4">
-			<h1>I MAKE THINGS</h1>
+			<h1 class="title">energized by imagination</h1>
 			<div class="tagline">{segment != undefined ? segment.toUpperCase() : "HOME"}</div>
 			</div>
 	</div>
 	 <!-- Fixed Masonry Filters -->
-	 <div class="categories-wrapper yellow lighten-4">
+	 <div class="categories-wrapper">
 		<div class="categories-container">
 		  <ul class="categories container">
 			{#if segment === "gallery"}
