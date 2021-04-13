@@ -11,9 +11,7 @@
 
 </style>
 
-    <div>
-        esto es inutil borrarlo en proximo commit
-    </div>
+
 
 <div class="{color}">
 hijo 1
