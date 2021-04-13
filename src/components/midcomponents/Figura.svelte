@@ -8,10 +8,11 @@
     padding:3px;
     border:1px dotted black;
 }
+
 </style>
 
     <div>
-        
+        esto es inutil borrarlo en proximo commit
     </div>
 
 <div class="{color}">
