@@ -1,0 +1,8 @@
+[build]
+  command = "npm run export"
+  functions = "lambda"
+  publish = "__sapper__/export"
+  base = "/"
+
+[functions]
+  directory = "functions"

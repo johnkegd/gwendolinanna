@@ -65,9 +65,9 @@ nav ul:not(.indicators) li.active::before {
 			</ul>
 			  <!-- Dropdown Structure -->
 			  <ul id='feature-dropdown' class='dropdown-content'>
-				<li><a href="full-header.html">Fullscreen Header</a></li>
-				<li><a href="horizontal.html">Horizontal Style</a></li>
-				<li><a href="no-image.html">No Image Expand</a></li>
+				<li><a href=".">Fullscreen Header</a></li>
+				<li><a href=".">Horizontal Style</a></li>
+				<li><a href=".">No Image Expand</a></li>
 			  </ul>
 		
 			<div class="nav-header center yellow-text text-lighten-4">

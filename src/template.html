@@ -8,11 +8,12 @@
 	%sapper.base%
 
 	<link rel="stylesheet" href="global.css">
-	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
-	<link rel="icon" type="image/png" href="logo-favicon.png">
+	<link rel="manifest" href="manifest.json" crossOrigin="anonymous">
+	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="apple-touch-icon" href="logo-192.png">
-	<link rel="stylesheet" href="materialize/css/gallery.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="materialize/css/gallery.css">
+<!-- 	<link rel="stylesheet" href="materialize/css/gallery.css">  -->
+	<link rel="prefetch" as="style" onload="this.rel = 'stylesheet'" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<!--Import materialize.css-->
 
 	<!-- Sapper creates a <script> tag containing `src/client.js`

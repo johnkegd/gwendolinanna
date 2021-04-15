@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "gwendolin-app",
+  "description": "Gwendolin SPA (portfolio, blog, gallery, NFT-shop and others coming soon).",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
