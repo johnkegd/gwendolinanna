@@ -17,7 +17,7 @@
 }
 
 nav ul:not(.indicators) li.active::before {
-    background-color: #ffffcc !important;
+    background-color: #0080ff !important;
   }
 
   .categories-wrapper {
@@ -27,6 +27,9 @@ nav ul:not(.indicators) li.active::before {
 
 .nav-extended {
 	background-color: #212121;
+}
+.nav-wrapper {
+	color: #fff;
 }
 
 
@@ -49,7 +52,7 @@ nav ul:not(.indicators) li.active::before {
 	<div class="nav-background">
 		<div class="pattern active" style="background-image: url({background})"></div>
 	</div>
-	  <div class="nav-wrapper container grey-text text-lighten-3">
+	  <div class="nav-wrapper container">
 			<a href="." class="brand-logo"><img src={logo} with="200" height="300" alt="gwendolin logo"></a>
 			<a href="." data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			<ul class="right hide-on-med-and-down">
