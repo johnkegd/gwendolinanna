@@ -10,7 +10,9 @@
 		{title:"hi card 5", description:"hi description 5"},
 	]
 /* 	import ColorManager from '../components/ColorManager.svelte';
-	import Color from '../components/Color.svelte'; */
+	import Color from '../components/Color.svelte'; 
+	{title:"Energized by imagination",animated:true,animation:"type"})
+	*/
 </script>
 
 <style>
@@ -27,7 +29,7 @@
 
 <div class="row">
 	{#each Cards as card}
-	<div class="col s4">
+	<div class="col s4" >
 		<Card {...card}/>
 	</div>
 {/each}

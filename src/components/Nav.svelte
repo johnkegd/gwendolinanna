@@ -1,8 +1,35 @@
 <script>
+	import {onMount,tick,afterUpdate, beforeUpdate, onDestroy} from 'svelte';
 	import SideNav from './SideNav.svelte';
 	import logo from '../node_modules/images/logo-2.svg';
-	import background from '../node_modules/images/stars.svg'
+	import background from '../node_modules/images/stars.svg';
+	import {fade,fly} from 'svelte/transition';
+	import {typewriter} from '../animations.js';
+	import {pagesData} from '../pagesData.js';
+	let visible;
+	
 	export let segment;
+	let titleVisible = false;
+	let currentPage = pagesData[segment||"home"];;
+	console.log(currentPage, "hola");
+/* onMount(() => {
+visible = true;
+});
+ */
+afterUpdate(() => {
+	visible = true;
+	currentPage = pagesData[segment||"home"];
+	console.log("after");
+});
+
+onDestroy(() =>{
+console.log("destroyed");
+});
+
+
+function doSomething(){
+visible = !visible
+}
 </script>
 
 <style>
@@ -60,19 +87,21 @@ nav ul:not(.indicators) li.active::before {
 				<li class:active={segment === "gallery"}><a rel=prefetch href="gallery">Gallery</a></li>
 				<li class:active={segment === "about"}><a href="about">About</a></li>
 				<li class:active={segment === "blog"}><a href="blog">Blog</a></li>
-				<li><a class='dropdown-trigger' href data-target='feature-dropdown'>Features<i
+				<li></li>
+				<li><a class='dropdown-trigger' href data-target='feature-dropdown'>Ideas<i
 					class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
 			  <!-- Dropdown Structure -->
 			  <ul id='feature-dropdown' class='dropdown-content'>
-				<li><a href=".">Fullscreen Header</a></li>
-				<li><a href=".">Horizontal Style</a></li>
-				<li><a href=".">No Image Expand</a></li>
+				<li><a href="ideas/bank">bank</a></li>
+				<li><a href="ideas/art">Art</a></li>
+				<li><a href="ideas/docs">Docs</a></li>
 			  </ul>
 		
 			<div class="nav-header center yellow-text text-lighten-4">
-			<h1 class="title">energized by imagination</h1>
-			<div class="tagline">{segment != undefined ? segment.toUpperCase() : "HOME"}</div>
+				<button on:click={doSomething}>click</button>
+				<h1 class="title" in:typewriter out:fade>{currentPage.title}</h1>
+			<div class="tagline">{currentPage.name.toUpperCase()}</div>
 			</div>
 	</div>
 	 <!-- Fixed Masonry Filters -->
@@ -84,9 +113,14 @@ nav ul:not(.indicators) li.active::before {
 			<li><a href="#polygon">Polygon</a></li>
 			<li><a href="#bigbang">Big Bang</a></li>
 			<li><a href="#sacred">Sacred Geometry</a></li>
+			{:else}
+			<li class="active"><a href="#all">A</a></li>
+			<li><a href="#polygon">B</a></li>
+			<li><a href="#bigbang">C</a></li>
+			<li><a href="#sacred">D</a></li>
 			{/if}
 		  </ul>
 		</div>
 	  </div>
 </nav>
-<SideNav segment={segment}/>
+<SideNav segment/>
