@@ -8,8 +8,10 @@
 	import {pagesData} from '../pagesData.js';
 	
 	export let segment;
+	let pagesIterator = Object.values(pagesData);
 	let currentPage = pagesData[segment||"home"];;
-
+	let titleVisible = false;
+	
 
 beforeUpdate(() => {
 	currentPage = pagesData[segment||"home"];
@@ -19,6 +21,10 @@ beforeUpdate(() => {
 onDestroy(() =>{
 console.log("destroyed");
 });
+
+var callback = () => {
+titleVisible = true;
+};
 
 </script>
 
@@ -89,7 +95,20 @@ nav ul:not(.indicators) li.active::before {
 			  </ul>
 		
 			<div class="nav-header center yellow-text text-lighten-4">
-				{#if currentPage.animate.in && currentPage.animate.out} 
+				{#each pagesIterator as page}
+					{#if page.name == currentPage.name}
+						{#if page.animate.in &&  page.animate.out}
+						<h1 class="title" in:typewriter out:fade>{currentPage.title}</h1>
+						{:else if page.animate.in}
+						<h1 class="title" in:typewriter out:fly="{{x:300, duration:600}}">{currentPage.title}</h1>
+						{:else if page.animate.out}
+						<h1 class="title" out:fly="{{x:300, duration:800}}">{currentPage.title}</h1>
+						{:else}
+						<h1 class="title">{currentPage.title}</h1>
+						{/if}
+					{/if}
+				{/each}
+				<!-- {#if currentPage.animate.in && currentPage.animate.out} 
 					{#if currentPage.animate.in === "typewriter" && currentPage.animate.out === "fly"}
 						<h1 class="title"  in:typewriter out:fly="{{x:300 , duration:700}}">{currentPage.title}</h1>
 						{:else if currentPage.animate.out === "fade"}
@@ -99,7 +118,7 @@ nav ul:not(.indicators) li.active::before {
 					{/if}
 				{:else}
 				<h1 class="title" in:typewriter>{currentPage.title}</h1>				
-				{/if}		
+				{/if}		 -->
 			<div class="tagline">{currentPage.name.toUpperCase()}</div>
 			</div>
 	</div>
