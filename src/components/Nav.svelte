@@ -1,8 +1,32 @@
 <script>
+	import {onMount,tick,afterUpdate, beforeUpdate, onDestroy} from 'svelte';
 	import SideNav from './SideNav.svelte';
 	import logo from '../node_modules/images/logo-2.svg';
-	import background from '../node_modules/images/stars.svg'
+	import background from '../node_modules/images/stars.svg';
+	import {fade,fly, crossfade} from 'svelte/transition';
+	import {typewriter} from '../animations.js';
+	import {pagesData} from '../pagesData.js';
+	
 	export let segment;
+	let pagesIterator = Object.values(pagesData);
+	let currentPage = pagesData[segment||"home"];;
+	
+
+beforeUpdate(() => {
+	currentPage = pagesData[segment||"home"];
+});
+
+
+onDestroy(() =>{
+console.log("destroyed");
+});
+
+//
+
+/**
+ * TODO title animations onMount
+ * */	
+
 </script>
 
 <style>
@@ -60,33 +84,56 @@ nav ul:not(.indicators) li.active::before {
 				<li class:active={segment === "gallery"}><a rel=prefetch href="gallery">Gallery</a></li>
 				<li class:active={segment === "about"}><a href="about">About</a></li>
 				<li class:active={segment === "blog"}><a href="blog">Blog</a></li>
-				<li><a class='dropdown-trigger' href data-target='feature-dropdown'>Features<i
+				<li></li>
+				<li><a class='dropdown-trigger' href data-target='feature-dropdown'>Ideas<i
 					class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
 			  <!-- Dropdown Structure -->
 			  <ul id='feature-dropdown' class='dropdown-content'>
-				<li><a href=".">Fullscreen Header</a></li>
-				<li><a href=".">Horizontal Style</a></li>
-				<li><a href=".">No Image Expand</a></li>
+				<li><a href="ideas/bank">bank</a></li>
+				<li><a href="ideas/art">Art</a></li>
+				<li><a href="ideas/docs">Docs</a></li>
 			  </ul>
 		
 			<div class="nav-header center yellow-text text-lighten-4">
-			<h1 class="title">energized by imagination</h1>
-			<div class="tagline">{segment != undefined ? segment.toUpperCase() : "HOME"}</div>
+				{#each pagesIterator as page}
+					{#if page.name == currentPage.name}
+						{#if page.animate.in &&  page.animate.out}
+						<h1 class="title" in:typewriter out:fly="{{x:250 , duration:600}}">{currentPage.title}</h1>
+						{:else if page.animate.in}
+						<h1 class="title" in:typewriter out:fade>{currentPage.title}</h1>
+						{:else if page.animate.out}
+						<h1 class="title" out:fly="{{x:300, duration:800}}">{currentPage.title}</h1>
+						{:else}
+						<h1 class="title">{currentPage.title}</h1>
+						{/if}
+					{/if}
+				{/each}
+			<div class="tagline">{currentPage.name.toUpperCase()}</div>
 			</div>
 	</div>
 	 <!-- Fixed Masonry Filters -->
 	 <div class="categories-wrapper">
 		<div class="categories-container">
 		  <ul class="categories container">
-			{#if segment === "gallery"}
-			<li class="active"><a href="#all">All</a></li>
-			<li><a href="#polygon">Polygon</a></li>
-			<li><a href="#bigbang">Big Bang</a></li>
-			<li><a href="#sacred">Sacred Geometry</a></li>
+			{#if currentPage.name === "gallery"}
+			<li class="active"><a href="gallery/#all">All</a></li>
+			<li><a href="gallery/#polygon">Polygon</a></li>
+			<li><a href="gallery/#bigbang">Big Bang</a></li>
+			<li><a href="gallery/#sacred">Sacred Geometry</a></li>
+			{:else if currentPage.name != "home"}
+			<li class="active"><a href="{currentPage.name}/#A">A</a></li>
+			<li><a href="{currentPage.name}/#B">B</a></li>
+			<li><a href="{currentPage.name}/#C">C</a></li>
+			<li><a href="{currentPage.name}/#D">D</a></li>
+			{:else}
+			<li class="active"><a href="#A">A</a></li>
+			<li><a href="#B">B</a></li>
+			<li><a href="#C">C</a></li>
+			<li><a href="#D">D</a></li>
 			{/if}
 		  </ul>
 		</div>
 	  </div>
 </nav>
-<SideNav segment={segment}/>
+<SideNav segment/>
