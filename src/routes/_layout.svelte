@@ -3,6 +3,10 @@
 	import Footer from '../components/Footer.svelte';
 	export let segment;
 	console.log(segment);
+	function hola(e) {
+
+	}
+
 </script>
 
 <style>

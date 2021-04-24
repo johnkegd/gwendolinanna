@@ -1,8 +1,8 @@
 const pagesData = {
-    home:{ name: "home", title: "Energized by imagination", animated: true, animation: "type" },
-    about:{ name: "about", title: "Energized by about", animated: true, animation: "type" },
-    blog:{ name: "blog", title: "Energized by blog", animated: true, animation: "type" },
-    gallery:{ name: "gallery", title: "Energized by gallery", animated: true, animation: "type" },
+    home:{ name: "home", title: "Energized by imagination", animate: {in:"typewriter"}, animation: "type" },
+    about:{ name: "about", title: "Energized by about", animate: {in:"typewriter",out:"crossfade"}, animation: "type" },
+    blog:{ name: "blog", title: "Energized by blog", animate: {in:"typewriter",out:"fade"}, animation: "type" },
+    gallery:{ name: "gallery", title: "Energized by gallery", animate: {in:"typewriter",out:"fly"}, animation: "type" },
 }
 
 export { pagesData };

@@ -3,33 +3,23 @@
 	import SideNav from './SideNav.svelte';
 	import logo from '../node_modules/images/logo-2.svg';
 	import background from '../node_modules/images/stars.svg';
-	import {fade,fly} from 'svelte/transition';
+	import {fade,fly, crossfade} from 'svelte/transition';
 	import {typewriter} from '../animations.js';
 	import {pagesData} from '../pagesData.js';
-	let visible;
 	
 	export let segment;
-	let titleVisible = false;
 	let currentPage = pagesData[segment||"home"];;
-	console.log(currentPage, "hola");
-/* onMount(() => {
-visible = true;
-});
- */
-afterUpdate(() => {
-	visible = true;
+
+
+beforeUpdate(() => {
 	currentPage = pagesData[segment||"home"];
-	console.log("after");
 });
+
 
 onDestroy(() =>{
 console.log("destroyed");
 });
 
-
-function doSomething(){
-visible = !visible
-}
 </script>
 
 <style>
@@ -99,8 +89,17 @@ nav ul:not(.indicators) li.active::before {
 			  </ul>
 		
 			<div class="nav-header center yellow-text text-lighten-4">
-				<button on:click={doSomething}>click</button>
-				<h1 class="title" in:typewriter out:fade>{currentPage.title}</h1>
+				{#if currentPage.animate.in && currentPage.animate.out} 
+					{#if currentPage.animate.in === "typewriter" && currentPage.animate.out === "fly"}
+						<h1 class="title"  in:typewriter out:fly="{{x:300 , duration:700}}">{currentPage.title}</h1>
+						{:else if currentPage.animate.out === "fade"}
+							<h1 class="title" in:typewriter out:fade>{currentPage.title}</h1>
+							{:else if currentPage.animate.out === "crossfade"}
+							<h1 class="title" in:typewriter out:crossfade>{currentPage.title}</h1>
+					{/if}
+				{:else}
+				<h1 class="title" in:typewriter>{currentPage.title}</h1>				
+				{/if}		
 			<div class="tagline">{currentPage.name.toUpperCase()}</div>
 			</div>
 	</div>
