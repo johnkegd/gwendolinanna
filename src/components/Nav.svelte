@@ -10,7 +10,6 @@
 	export let segment;
 	let pagesIterator = Object.values(pagesData);
 	let currentPage = pagesData[segment||"home"];;
-	let titleVisible = false;
 	
 
 beforeUpdate(() => {
@@ -22,9 +21,11 @@ onDestroy(() =>{
 console.log("destroyed");
 });
 
-var callback = () => {
-titleVisible = true;
-};
+//
+
+/**
+ * TODO title animations onMount
+ * */	
 
 </script>
 
@@ -98,9 +99,9 @@ nav ul:not(.indicators) li.active::before {
 				{#each pagesIterator as page}
 					{#if page.name == currentPage.name}
 						{#if page.animate.in &&  page.animate.out}
-						<h1 class="title" in:typewriter out:fade>{currentPage.title}</h1>
+						<h1 class="title" in:typewriter out:fly="{{x:250 , duration:600}}">{currentPage.title}</h1>
 						{:else if page.animate.in}
-						<h1 class="title" in:typewriter out:fly="{{x:300, duration:600}}">{currentPage.title}</h1>
+						<h1 class="title" in:typewriter out:fade>{currentPage.title}</h1>
 						{:else if page.animate.out}
 						<h1 class="title" out:fly="{{x:300, duration:800}}">{currentPage.title}</h1>
 						{:else}
@@ -108,17 +109,6 @@ nav ul:not(.indicators) li.active::before {
 						{/if}
 					{/if}
 				{/each}
-				<!-- {#if currentPage.animate.in && currentPage.animate.out} 
-					{#if currentPage.animate.in === "typewriter" && currentPage.animate.out === "fly"}
-						<h1 class="title"  in:typewriter out:fly="{{x:300 , duration:700}}">{currentPage.title}</h1>
-						{:else if currentPage.animate.out === "fade"}
-							<h1 class="title" in:typewriter out:fade>{currentPage.title}</h1>
-							{:else if currentPage.animate.out === "crossfade"}
-							<h1 class="title" in:typewriter out:crossfade>{currentPage.title}</h1>
-					{/if}
-				{:else}
-				<h1 class="title" in:typewriter>{currentPage.title}</h1>				
-				{/if}		 -->
 			<div class="tagline">{currentPage.name.toUpperCase()}</div>
 			</div>
 	</div>
@@ -126,16 +116,21 @@ nav ul:not(.indicators) li.active::before {
 	 <div class="categories-wrapper">
 		<div class="categories-container">
 		  <ul class="categories container">
-			{#if segment === "gallery"}
-			<li class="active"><a href="#all">All</a></li>
-			<li><a href="#polygon">Polygon</a></li>
-			<li><a href="#bigbang">Big Bang</a></li>
-			<li><a href="#sacred">Sacred Geometry</a></li>
+			{#if currentPage.name === "gallery"}
+			<li class="active"><a href="gallery/#all">All</a></li>
+			<li><a href="gallery/#polygon">Polygon</a></li>
+			<li><a href="gallery/#bigbang">Big Bang</a></li>
+			<li><a href="gallery/#sacred">Sacred Geometry</a></li>
+			{:else if currentPage.name != "home"}
+			<li class="active"><a href="{currentPage.name}/#A">A</a></li>
+			<li><a href="{currentPage.name}/#B">B</a></li>
+			<li><a href="{currentPage.name}/#C">C</a></li>
+			<li><a href="{currentPage.name}/#D">D</a></li>
 			{:else}
-			<li class="active"><a href="#all">A</a></li>
-			<li><a href="#polygon">B</a></li>
-			<li><a href="#bigbang">C</a></li>
-			<li><a href="#sacred">D</a></li>
+			<li class="active"><a href="#A">A</a></li>
+			<li><a href="#B">B</a></li>
+			<li><a href="#C">C</a></li>
+			<li><a href="#D">D</a></li>
 			{/if}
 		  </ul>
 		</div>
