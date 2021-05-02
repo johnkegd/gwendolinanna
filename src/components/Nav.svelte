@@ -85,7 +85,7 @@ nav ul:not(.indicators) li.active::before {
 				<li class:active={segment === "about"}><a href="about">About</a></li>
 				<li class:active={segment === "blog"}><a href="blog">Blog</a></li>
 				<li></li>
-				<li><a class='dropdown-trigger' href data-target='feature-dropdown'>Ideas<i
+				<li><a class='dropdown-trigger' href="/ideas" data-target='feature-dropdown'>Ideas<i
 					class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
 			  <!-- Dropdown Structure -->
@@ -97,7 +97,7 @@ nav ul:not(.indicators) li.active::before {
 		
 			<div class="nav-header center yellow-text text-lighten-4">
 				{#each pagesIterator as page}
-					{#if page.name == currentPage.name}
+					{#if page.name && page.name == currentPage.name}
 						{#if page.animate.in &&  page.animate.out}
 						<h1 class="title" in:typewriter out:fly="{{x:250 , duration:600}}">{currentPage.title}</h1>
 						{:else if page.animate.in}
@@ -105,32 +105,33 @@ nav ul:not(.indicators) li.active::before {
 						{:else if page.animate.out}
 						<h1 class="title" out:fly="{{x:300, duration:800}}">{currentPage.title}</h1>
 						{:else}
-						<h1 class="title">{currentPage.title}</h1>
+						<h1 class="title">{page.title}</h1>
 						{/if}
 					{/if}
 				{/each}
-			<div class="tagline">{currentPage.name.toUpperCase()}</div>
+			<div class="tagline">{currentPage.name ? currentPage.name.toUpperCase() : segment.toUpperCase()}</div>
 			</div>
 	</div>
 	 <!-- Fixed Masonry Filters -->
 	 <div class="categories-wrapper">
 		<div class="categories-container">
 		  <ul class="categories container">
-			{#if currentPage.name === "gallery"}
+			{#if currentPage.name && currentPage.name === "gallery"}
 			<li class="active"><a href="gallery/#all">All</a></li>
 			<li><a href="gallery/#polygon">Polygon</a></li>
 			<li><a href="gallery/#bigbang">Big Bang</a></li>
 			<li><a href="gallery/#sacred">Sacred Geometry</a></li>
-			{:else if currentPage.name != "home"}
-			<li class="active"><a href="{currentPage.name}/#A">A</a></li>
-			<li><a href="{currentPage.name}/#B">B</a></li>
-			<li><a href="{currentPage.name}/#C">C</a></li>
-			<li><a href="{currentPage.name}/#D">D</a></li>
-			{:else}
+			{:else if currentPage.name === "home"}
 			<li class="active"><a href="#A">A</a></li>
 			<li><a href="#B">B</a></li>
 			<li><a href="#C">C</a></li>
 			<li><a href="#D">D</a></li>
+			
+			{:else}
+			<li class="active"><a href="{segment}/#A">A</a></li>
+			<li><a href="{segment}/#B">B</a></li>
+			<li><a href="{segment}/#C">C</a></li>
+			<li><a href="{segment}/#D">D</a></li>
 			{/if}
 		  </ul>
 		</div>

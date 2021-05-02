@@ -1,21 +1,13 @@
 <script>
+	import NavbarAuthor from '../components/Navbars/AuthNavbar.svelte';
 	import Nav from '../components/Nav.svelte';
-	import Footer from '../components/Footer.svelte';
+//	import Footer from '../components/Footer.svelte';
+import Footer from '../components/Footers/Footer.svelte';
 	export let segment;
 </script>
 
-<style>
-	main {
-		position: relative;
-		background-color: grey;
-		padding: 2em;
-		box-sizing: border-box;
-	}
-</style>
-
-<Nav {segment}/>
-
+<NavbarAuthor/>
 <main>
 	<slot></slot>
 </main>
-<Footer />
+|<Footer />
