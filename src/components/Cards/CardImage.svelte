@@ -1,13 +1,14 @@
 <script>
+  import imagePlaceHolder from '../../node_modules/images/example-250x250.jpg';
     export let cardTitle;
     export let cardDescription;
-    export let cardImage = "https://cdn.prod.www.spiegel.de/images/f612fd70-0001-0004-0000-000001243725_w948_r1.77_fpx69.95_fpy44.94.jpg";
-    export let cardStyles;
+    export let cardImage = imagePlaceHolder;
+    export let cardDescriptionBackground = "bg-blueGray-800";
 </script>
 
 <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
     <div
-      class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-red-400"
+      class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg {cardDescriptionBackground}"
     >
       <img
         alt="..."
@@ -23,7 +24,7 @@
         >
           <polygon
             points="-30,95 583,95 583,65"
-            class="text-red-400 fill-current"
+            class="text-teal-800 fill-current"
           />
         </svg>
         <h4 class="text-xl font-bold text-white">{cardTitle}</h4>

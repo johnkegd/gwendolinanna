@@ -1,18 +1,17 @@
 <script>
-  import SectionCardIcons from '../components/Sections/SectionLanding.svelte';
-  import Card from "../components/materialize/Card.svelte";
-  import CardIcon from '../components/Cards/CardIcon.svelte';
-  import logo from "images/logo-2.svg";
-  import stars from "images/stars.svg";
+	import SectionCardIcons from '../components/Sections/SectionCardIcons.svelte';
+	import SectionHighlight from '../components/Sections/SectionHighlight.svelte';
+	import Card from "../components/materialize/Card.svelte";
+	import CardIcon from '../components/Cards/CardIcon.svelte';
+	import logo from "images/logo-2.svg";
+	import stars from "images/stars.svg";
 </script>
 
 <svelte:head>
   <title>Gwendolin Home</title>
 </svelte:head>
 
-<div
-  class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
->
+<div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
   <div
     class="absolute top-0 w-full h-full bg-center bg-cover"
     style="background-image: url({stars});"
@@ -67,21 +66,28 @@
 </div>
 
 <SectionCardIcons>
-<CardIcon 
-	cardStyles="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"
-	cardTitle="Awarded Agency"
-	cardDescription="Divide details about your product or agency work into parts. A paragraph describing a feature will be enough."
-	cardIcon="fa-award"/>
-<CardIcon 
-	cardStyles="w-full md:w-4/12 px-4 text-center"
-	cardTitle="Free Revisions"
-	cardDescription="Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious."
-	cardIcon="fa-retweet"/>
-<CardIcon 
-	cardStyles="pt-6 w-full md:w-4/12 px-4 text-center"
-	cardTitle="Verified Company"
-	cardDescription="Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!"
-	cardIcon="fa-fingerprint"/>
-
+	<CardIcon 
+		cardStyles="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"
+		cardTitle="Awarded Agency"
+		cardDescription="Divide details about your product or agency work into parts. A paragraph describing a feature will be enough."
+		cardIcon="fa-award"
+		cardIconBackground="bg-red-400"
+	/>
+	<CardIcon 
+		cardStyles="w-full md:w-4/12 px-4 text-center"
+		cardTitle="Free Revisions"
+		cardDescription="Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious."
+		cardIcon="fa-retweet"
+	/>
+	<CardIcon 
+		cardStyles="pt-6 w-full md:w-4/12 px-4 text-center"
+		cardTitle="Verified Company"
+		cardDescription="Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!"
+		cardIcon="fa-fingerprint"
+		cardIconBackground="bg-purple-500"
+	/>
 </SectionCardIcons>
+
+<SectionHighlight/>
+
 
