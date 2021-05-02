@@ -14,7 +14,10 @@
   
         <div class="flex flex-wrap items-center mt-32">
             <TextPromotion 
-                iconType="fa-user-friends"
+                containerStyles="w-full md:w-5/12 px-4 mr-auto ml-auto"
+                iconType="fas fa-user-friends text-xl"
+                iconContainer="div"
+                iconStyles="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
                 promotionTitle="Working in it is a pleasure"
                 promotionP1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, repellendus."
                 promotionP2="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id tempora harum minima."
