@@ -1,5 +1,6 @@
 <script>
     import imagePlaceHolder from '../../node_modules/images/example-500x500.jpg';
+    import CardImage from '../Cards/CardImage.svelte';
     export let sectionStyles = "pb-20 bg-blueGray-200 -mt-24";
 </script>
 
@@ -36,36 +37,13 @@
           </a>
         </div>
   
-        <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-          <div
-            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-red-400"
-          >
-            <img
-              alt="..."
-              src={imagePlaceHolder}
-              class="w-full align-middle rounded-t-lg"
-            />
-            <blockquote class="relative p-8 mb-4">
-              <svg
-                preserveAspectRatio="none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 583 95"
-                class="absolute left-0 w-full block h-95-px -top-94-px"
-              >
-                <polygon
-                  points="-30,95 583,95 583,65"
-                  class="text-red-400 fill-current"
-                />
-              </svg>
-              <h4 class="text-xl font-bold text-white">Top Notch Services</h4>
-              <p class="text-md font-light mt-2 text-white">
-                The Arctic Ocean freezes every winter and much of the sea-ice then
-                thaws every summer, and that process will continue whatever
-                happens.
-              </p>
-            </blockquote>
-          </div>
-        </div>
+        <!-- example-->
+        <CardImage 
+        cardImage="https://www.australia.com/content/dam/assets/photograph/digital/l/g/1/9/1000557.jpg"
+        cardTitle="at the Beach"
+        cardDescription="sunny day"
+        />
+
       </div>
     </div>
   </section>
