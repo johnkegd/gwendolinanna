@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://gwendolinanna.com">
-    <img src="https://dev.gwendolinanna.com/client/9b501d8fd378ada7.svg" alt="Logo" width="100" height="100">
+    <img src="https://dev.gwendolinanna.com/client/9b501d8fd378ada7.svg" alt="Logo" width="250" height="250">
   </a>
 
   <h3 align="center">Gwendolin portal</h3>
