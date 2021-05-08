@@ -1,7 +1,7 @@
 <script>
     export let wrapper = true;
     export let wrapperStyles;
-    export let wrapperInLine;
+    export let wrapperInLine = "transform: translateZ(0)";
     export let svgStyles = "";
     export let svgViewBox = "";
     export let svgX = "0";

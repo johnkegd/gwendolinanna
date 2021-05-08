@@ -1,10 +1,25 @@
 <script>
     import Icon from '../Icons/Icon.svelte';
     import Separator from '../Separator.svelte';
-    import PromotionIconList from '../Lists/PromotionIcons.svelte';
+    import Image from '../Images.svelte';
+    import IconList from '../Lists/IconList.svelte';
+    import Li from '../Lists/ListItem.svelte';
     export let sectionStyles = "relative py-20";
 
 </script>
+
+<style>
+  .slotProp {
+    padding:1em;
+    margin:0 0 1em 0;
+    background-color:#eee;
+  }
+
+  .active {
+    background-color:#c23d26;
+    color:white;
+  }
+</style>
 
 <!--TODO: Reduce section complex with components-->
 <section class="{sectionStyles}">
@@ -19,15 +34,10 @@
 
     <div class="container mx-auto px-4">
       <div class="items-center flex flex-wrap">
-        <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
-          <img
-            alt="..."
-            class="max-w-full rounded-lg shadow-lg"
-            src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-          />
-        </div>
-
         <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+          <Image
+            imgStyles="max-w-full rounded-lg shadow-lg"
+          />
           <div class="md:pr-12">
               <Icon
                 container="div"
@@ -40,64 +50,27 @@
               started faster. You can change the text and images and you're
               good to go.
             </p>
-            
-      <!--       
-        here i was on focus, maybe u should see the slot 
-        props or conditional slots to implement dynamic lists
-        
-        <PromotionIconList listStyles="list-none mt-6">
 
-            </PromotionIconList>
-           -->
 
-            <ul class="list-none mt-6">
-              <li class="py-2">
-                <div class="flex items-center">
-                      <Icon
-                        wrapper="true"
-                        container="span"
-                        containerStyles="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-red-600 bg-red-200 mr-3"
-                        type="fas fa-fingerprint"
-                      />
-                  <div>
-                    <h4 class="text-blueGray-500">
-                      Carefully crafted components
-                    </h4>
-                  </div>
-                </div>
-              </li>
-              <li class="py-2">
-                <div class="flex items-center">
-                    <Icon
-                        wrapper="true"
-                        container="span"
-                        containerStyles="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-red-600 bg-red-200 mr-3"
-                        type="fab fa-html5"
-                    />
-                  <div>
-                    <h4 class="text-blueGray-500">
-                      Amazing page examples
-                    </h4>
-                  </div>
-                </div>
-              </li>
-              <li class="py-2">
-                <div class="flex items-center">
-                    <Icon 
-                        wrapper="true"
-                        container="span"
-                        containerStyles="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-red-600 bg-red-200 mr-3"
-                        type="far fa-paper-plane"
-                    />
-                  <div>
-                    <h4 class="text-blueGray-500">Dynamic components</h4>
-                  </div>
-                </div>
-              </li>
-            </ul>
+            <IconList listStyles="list-none mt-6" iconWrapper="true">
+              <Li 
+                liTitle="Carefully crafted components" 
+                liIconType="fas fa-fingerprint"
+              />
+              
+              <Li
+                liTitle="Amazing page examples"
+                liIconType="fab fa-html5"
+              />
+
+              <Li
+                liTitle="Dynamic components" 
+                liIconType="far fa-paper-plane"
+              />
+            </IconList>
+
           </div>
         </div>
-
       </div>
     </div>
   </section>

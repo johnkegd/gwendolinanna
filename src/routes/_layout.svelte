@@ -2,11 +2,11 @@
 	import NavbarAuthor from '../components/Navbars/AuthNavbar.svelte';
 //	import Footer from '../components/Footer.svelte';
 import Footer from '../components/Footers/Footer.svelte';
-	export let segment;
+//	export let segment;
 </script>
 
 <NavbarAuthor/>
 <main>
 	<slot></slot>
 </main>
-|<Footer />
+<Footer />

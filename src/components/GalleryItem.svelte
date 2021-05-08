@@ -29,15 +29,21 @@ export let category;
           </p>
         <div class="carousel-wrapper">
           <div class="carousel">
+            <!-- svelte-ignore a11y-missing-attribute -->
             <a class="carousel-item" href="#one!"><img src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/geometric-sun.jpg?v=5328726480767926026"></a>
+            <!-- svelte-ignore a11y-missing-attribute -->
             <a class="carousel-item" href="#two!"><img src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/geometric-maze.jpg?v=14238163633299520814"></a>
+           <!-- svelte-ignore a11y-missing-attribute -->
             <a class="carousel-item" href="#three!"><img src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/geometric-ice.jpg?v=10474404842800237238"></a>
+            <!-- svelte-ignore a11y-missing-attribute -->
             <a class="carousel-item" href="#four!"><img src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/geometric-cave.jpg?v=13127282243134125143"></a>
+            <!-- svelte-ignore a11y-missing-attribute -->
             <a class="carousel-item" href="#five!"><img src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/geometric-grapefruit.jpg?v=4070483676604165442"></a>
           </div>
         </div>
       </div>
       <div class="gallery-action">
+        <!-- svelte-ignore a11y-missing-attribute -->
         <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
       </div>
     </div>

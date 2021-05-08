@@ -12,7 +12,7 @@
     "start": "node __sapper__/build",
     "build:tailwind": "tailwind build static/assets/styles/index.css -o static/assets/styles/tailwind.css",
     "build:fontawesome": "mkdir -p static/assets/vendor/@fortawesome/fontawesome-free/webfonts && mkdir -p static/assets/vendor/@fortawesome/fontawesome-free/css && cp -a ./node_modules/@fortawesome/fontawesome-free/webfonts static/assets/vendor/@fortawesome/fontawesome-free/ && cp ./node_modules/@fortawesome/fontawesome-free/css/all.min.css static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf __sappper__ && npm install && npm run build:tailwind && npm run build:fontawesome && npm run dev"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf __sapper__/ && npm install && npm run build:fontawesome && npm run dev"
   },
   "dependencies": {
     "compression": "^1.7.1",

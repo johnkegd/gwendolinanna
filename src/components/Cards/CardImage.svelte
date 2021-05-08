@@ -9,8 +9,7 @@
 
 <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
     <div
-      class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg {cardDescriptionBackground}"
-    >
+      class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg {cardDescriptionBackground}">
       <img
         alt="..."
         src="{cardImage}"
