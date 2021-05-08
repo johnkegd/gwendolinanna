@@ -76,26 +76,30 @@
 	<!-- <div slot="head-section"> outside the inner container </div> -->
 	<!-- <div slot="footer-section"> outside the inner container bottom area</div> -->
 	<div class="flex flex-wrap">
-		<CardIcon 
-			cardStyles="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"
-			cardTitle="Awarded Agency"
-			cardDescription="Divide details about your product or agency work into parts. A paragraph describing a feature will be enough."
-			cardIconType="fas fa-award"
-			cardIconBackground="bg-red-400"
-		/>
-		<CardIcon 
-			cardStyles="w-full md:w-4/12 px-4 text-center"
-			cardTitle="Free Revisions"
-			cardDescription="Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious."
-			cardIconType="fas fa-retweet"
-		/>
-		<CardIcon 
-			cardStyles="pt-6 w-full md:w-4/12 px-4 text-center"
-			cardTitle="Verified Company"
-			cardDescription="Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!"
-			cardIconType="fas fa-fingerprint"
-			cardIconBackground="bg-purple-500"
-		/>
+		<CardIcon cardStyles="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" iconType="fas fa-award"
+			iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+		>
+			<h6 class="text-xl font-semibold">Awarded Agency</h6>
+			<p class="mt-2 mb-4 text-blueGray-500">
+				Some quick example text to build on the card title and make up the bulk of the card's content.
+			</p>
+		</CardIcon>
+		<CardIcon cardStyles="w-full md:w-4/12 px-4 text-center" iconType="fas fa-retweet"
+			iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
+		>
+			<h6 class="text-xl font-semibold">Free Revisions</h6>
+			<p class="mt-2 mb-4 text-blueGray-500">
+				Some quick example text to build on the card title and make up the bulk of the card's content.
+			</p>
+		</CardIcon>
+		<CardIcon cardStyles="pt-6 w-full md:w-4/12 px-4 text-center" iconType="fas fa-fingerprint"
+			iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-500"
+		>
+			<h6 class="text-xl font-semibold">Verified Company</h6>
+			<p class="mt-2 mb-4 text-blueGray-500">
+				Some quick example text to build on the card title and make up the bulk of the card's content.
+			</p>
+		</CardIcon>
 		<div class="flex flex-wrap items-center mt-20">
 			<TextPromotion 
 				containerStyles="w-full md:w-5/12 px-4 mr-auto ml-auto"
@@ -124,14 +128,7 @@
 
 <!-- Highlights section-->
 <Section sectionStyles="relative py-20" containerStyles="items-center flex flex-wrap">
-	<Separator 
-		slot="head-section"
-		wrapperStyles="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
-		svgStyles="absolute bottom-0 overflow-hidden"
-		svgViewBox="0 0 2560 100"
-		polygonStyles="text-white fill-current"
-		polygonPoints="2560 0 2560 100 0 100"
-  	/>
+	<Separator slot="head-section"/>
 	<div slot="images-section" class="w-full md:w-4/12 ml-auto mr-auto px-4">
 		<Image imgStyles="max-w-full rounded-lg shadow-lg"/>
 	</div>
@@ -164,5 +161,48 @@
 				/>
 			</IconList>
 		</TextPromotion>
+	</div>
+</Section>
+
+<!-- Contact section -->
+<Section sectionStyles="pb-20 relative block bg-blueGray-800" containerStyles="container mx-auto px-4 lg:pt-24 lg:pb-64">
+	<Separator slot="head-section" polygonStyles="text-blueGray-800 fill-current"/>
+	<div class="flex flex-wrap text-center justify-center">
+		<div class="w-full lg:w-6/12 px-4">
+		  <h2 class="text-4xl font-semibold text-white">
+			Build something
+		  </h2>
+		  <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero eum amet rem. Dolores, dicta eligendi.
+		  </p>
+		</div>
+	</div>
+
+	<div class="flex flex-wrap mt-12 justify-center">
+
+		<CardIcon noBg="true"  cardStyles="w-full lg:w-3/12 px-4 text-center" iconType="fas fa-medal text-xl"
+			iconStyles="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+		>
+			<h6 class="text-xl mt-5 font-semibold text-white">Excelent Services</h6>
+			<p class="mt-2 mb-4 text-blueGray-400">
+				Some quick example text to build on the card title and make up the bulk of the card's content.
+			</p>
+		</CardIcon>
+		<CardIcon noBg="true" cardStyles="w-full lg:w-3/12 px-4 text-center" iconType="fas fa-poll text-xl"
+			iconStyles="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+		>
+			<h6 class="text-xl mt-5 font-semibold text-white">Grow your creativity</h6>
+			<p class="mt-2 mb-4 text-blueGray-400">
+				Some quick example text to build on the card title and make up the bulk of the card's content.
+			</p>
+		</CardIcon>
+		<CardIcon noBg="true" cardStyles="w-full lg:w-3/12 px-4 text-center" iconType="fas fa-lightbulb text-xl"
+			iconStyles="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+		>
+			<h6 class="text-xl mt-5 font-semibold text-white">Launch time</h6>
+			<p class="mt-2 mb-4 text-blueGray-400">
+				Some quick example text to build on the card title and make up the bulk of the card's content.
+			</p>
+		</CardIcon>
 	</div>
 </Section>
