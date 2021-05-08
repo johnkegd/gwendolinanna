@@ -71,14 +71,16 @@
 		cardTitle="Awarded Agency"
 		cardDescription="Divide details about your product or agency work into parts. A paragraph describing a feature will be enough."
 		cardIcon="fa-award"
-		cardIconBackground="bg-red-400"
+    cardIconBackground="bg-blue-700"
+
 	/>
 	<CardIcon 
 		cardStyles="w-full md:w-4/12 px-4 text-center"
 		cardTitle="Free Revisions"
 		cardDescription="Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious."
-		cardIcon="fa-retweet"
-	/>
+		cardIcon="fa-moon"
+		cardIconBackground="bg-red-400"
+    />
 	<CardIcon 
 		cardStyles="pt-6 w-full md:w-4/12 px-4 text-center"
 		cardTitle="Verified Company"

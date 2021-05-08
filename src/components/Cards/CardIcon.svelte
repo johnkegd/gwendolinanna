@@ -11,6 +11,7 @@ export let cardIconBackground = "bg-emerald-400";
       class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
     >
       <div class="px-4 py-5 flex-auto">
+        {@debug cardIconBackground}
         <div
           class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full {cardIconBackground}"
         >
