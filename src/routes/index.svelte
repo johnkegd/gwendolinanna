@@ -10,13 +10,12 @@
 	import Image from '../components/Images.svelte';
 	import logo from "images/logo-2.svg";
 	import stars from "images/stars.svg";
-import Nester from '../components/Nester.svelte';
+	import Nester from '../components/Nester.svelte';
 </script>
 
 <svelte:head>
   <title>Gwendolin Home</title>
 </svelte:head>
-
 <!--TODO: Split in components to header by page-->
 <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
   <div

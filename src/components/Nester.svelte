@@ -1,5 +1,5 @@
 <script>
-export let clsChildrens;
+export let clsChildrens = ["floor-0","floor-1","floor-2","floor-3"];
 </script>
 
 <!-- TODO iterate clsChildrens arrays and create dynamic floors-->

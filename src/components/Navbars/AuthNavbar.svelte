@@ -5,10 +5,12 @@
     function setNavbarOpen() {
         navbarOpen = !navbarOpen;
     }
+    let y;
 </script>
 
+<svelte:window bind:scrollY="{y}"/>
 <nav
-  class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
+  class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg {y > 700 ? 'bg-blueGray-800': ''}"
 >
   <div
     class="container px-4 mx-auto flex flex-wrap items-center justify-between"
