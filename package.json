@@ -30,7 +30,7 @@
     "sapper": "^0.28.0",
     "svelte": "^3.17.3",
     "autoprefixer": "10.2.5",
-    "postcss": "8.2.8",
+    "postcss": "8.2.10",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
