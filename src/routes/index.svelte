@@ -73,6 +73,7 @@
 
 <!-- Card icons section-->
 <Section sectionStyles="pb-20 bg-blueGray-200 -mt-24">
+	
 	<!-- <div slot="head-section"> outside the inner container </div> -->
 	<!-- <div slot="footer-section"> outside the inner container bottom area</div> -->
 	<div class="flex flex-wrap">
@@ -125,6 +126,8 @@
 		</div>
 	</div>
 </Section>
+
+
 
 <!-- Highlights section-->
 <Section sectionStyles="relative py-20" containerStyles="items-center flex flex-wrap">
