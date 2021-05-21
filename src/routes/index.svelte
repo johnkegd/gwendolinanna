@@ -11,6 +11,7 @@
 	import Image from '../components/Images.svelte';
 	import logo from "images/logo-2.svg";
 	import stars from "images/stars.svg";
+	import Banner1 from '../components/Banners/Banner1.svelte';
 </script>
 
 <svelte:head>
@@ -73,6 +74,7 @@
 
 <!-- Card icons section-->
 <Section sectionStyles="pb-20 bg-blueGray-200 -mt-24">
+	
 	<!-- <div slot="head-section"> outside the inner container </div> -->
 	<!-- <div slot="footer-section"> outside the inner container bottom area</div> -->
 	<div class="flex flex-wrap">
@@ -125,6 +127,10 @@
 		</div>
 	</div>
 </Section>
+
+
+
+<Banner1/>
 
 <!-- Highlights section-->
 <Section sectionStyles="relative py-20" containerStyles="items-center flex flex-wrap">
