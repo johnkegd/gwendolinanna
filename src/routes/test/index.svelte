@@ -3,6 +3,8 @@
     import Color from '../../components/Color.svelte';
     import Card3D from '../../components/Cards/Card3DEfect.svelte';
     import Banner1 from '../../components/Banners/Banner1.svelte';
+    import Section from '../../components/Sections/Section.svelte';
+    import CardImage1 from '../../components/Cards/CardImage1.svelte';
 </script>
 
 
@@ -12,4 +14,10 @@
 
 <!-- <Card3D/> -->
 
-<Banner1/>
+<Section>
+
+    <CardImage1/>
+
+
+
+</Section>
