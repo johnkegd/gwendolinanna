@@ -5,6 +5,7 @@
     import Banner1 from '../../components/Banners/Banner1.svelte';
     import Section from '../../components/Sections/Section.svelte';
     import CardImage1 from '../../components/Cards/CardImage1.svelte';
+    import ImgContainer from '../../components/ImagesContainers/ImagesContainer.svelte';
 </script>
 
 
@@ -15,9 +16,5 @@
 <!-- <Card3D/> -->
 
 <Section>
-
-    <CardImage1/>
-
-
-
+    <ImgContainer/>
 </Section>
