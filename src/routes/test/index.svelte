@@ -6,7 +6,8 @@
     import Section from '../../components/Sections/Section.svelte';
     import CardImage1 from '../../components/Cards/CardImage1.svelte';
     import ImgContainer from '../../components/ImagesContainers/ImagesContainer.svelte';
-    import Prueba from '../../components/ImagesContainers/prueba.svelte';
+    import Prueba from '../../components/Cards/Prueba.svelte'
+    
 </script>
 
 
@@ -16,10 +17,7 @@
 
 <!-- <Card3D/> -->
 
-<!-- <Section>
-    <ImgContainer/>
-</Section> -->
-
 <Section>
     <Prueba/>
 </Section>
+
