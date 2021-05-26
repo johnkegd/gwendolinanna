@@ -11,7 +11,6 @@
 	import Image from '../components/Images.svelte';
 	import logo from "images/logo-2.svg";
 	import stars from "images/stars.svg";
-	import Banner1 from '../components/Banners/Banner1.svelte';
 </script>
 
 <svelte:head>
@@ -129,8 +128,6 @@
 </Section>
 
 
-
-<Banner1/>
 
 <!-- Highlights section-->
 <Section sectionStyles="relative py-20" containerStyles="items-center flex flex-wrap">
