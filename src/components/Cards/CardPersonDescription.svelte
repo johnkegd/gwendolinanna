@@ -46,6 +46,7 @@
     .description .social a{
         display: inline-block;
         padding: 0 15px;
+        color: #f0522a;
     }
 
     .info, .description{
@@ -76,6 +77,30 @@
 
     .info h4{
         margin-top: 20px;
+    }
+
+    @media (max-width:640px){
+        #card{
+            display: block;
+            width: 450px;
+        }
+        .info{
+            padding: 20px 20px 5px 20px;
+            border: 0;
+        }
+        img{
+            margin: 0px auto;
+        }
+        .description{
+            padding: 5px 20px 20px 20px;
+            background: transparent;
+        }
+        .info h4{
+            margin: 0;
+        }
+        .social a{
+            margin-bottom: 10px;
+        }
     }
 
 </style>
