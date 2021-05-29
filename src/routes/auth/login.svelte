@@ -6,7 +6,7 @@
     import githubLogo from '../../node_modules/images/github.svg';
     import googleLogo from '../../node_modules/images/google.svg';
     import Nester from '../../components/Nester.svelte';
-
+    import Boy from '../../components/GraphicArts/Boy.svelte';
     import background from '../../node_modules/images/gwendi-art-default.png';
 </script>
 
@@ -16,8 +16,14 @@
         containerStyles="false"
         >
         <!-- here will be an image as background or css -->
-        <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full" style="background-image: url({background});"></div>
-    <Nester clsChildrens="{["container mx-auto px-4 h-full","flex content-center items-center justify-center h-full"]}">
+<!--         <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full" style="background-image: url({background});"></div>
+ -->    
+ 
+ <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full">
+    <Boy/>
+ </div>
+
+ <Nester clsChildrens="{["container mx-auto px-4 h-full","flex content-center items-center justify-center h-full"]}">
         <div class="w-full lg:w-4/12 px-4" slot="floor-1">
             <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
                 <SignOptions styles="rounded-t mb-0 px-6 py-6">
