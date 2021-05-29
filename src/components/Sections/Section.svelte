@@ -4,11 +4,17 @@
 
 </script>
 
-<section class="{sectionStyles}">
-    <slot name="head-section"></slot>  
-    <div class="{containerStyles}">
-        <slot name="images-section"></slot>
+{#if containerStyles != "false"}
+    <section class="{sectionStyles}">
+        <slot name="head-section"></slot>  
+        <div class="{containerStyles}">
+            <slot name="images-section"></slot>
+            <slot></slot>
+        </div>
+        <slot name="footer-section"></slot>
+    </section>
+{:else }
+    <section class="{sectionStyles}">
         <slot></slot>
-    </div>
-    <slot name="footer-section"></slot>
-</section>
+    </section>
+{/if}
