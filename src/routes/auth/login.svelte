@@ -6,12 +6,17 @@
     import githubLogo from '../../node_modules/images/github.svg';
     import googleLogo from '../../node_modules/images/google.svg';
     import Nester from '../../components/Nester.svelte';
+
+    import background from '../../node_modules/images/gwendi-art-default.png';
 </script>
+
 
 <Section    
         sectionStyles="relative w-full h-full py-40 min-h-screen" 
-        containerStyles="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
+        containerStyles="false"
         >
+        <!-- here will be an image as background or css -->
+        <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full" style="background-image: url({background});"></div>
     <Nester clsChildrens="{["container mx-auto px-4 h-full","flex content-center items-center justify-center h-full"]}">
         <div class="w-full lg:w-4/12 px-4" slot="floor-1">
             <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
@@ -32,13 +37,12 @@
                             </SignButton>
                         </span>
                 </SignOptions>
-            </div>
-
-            <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <div class="text-blueGray-400 text-center mb-3 font-bold">
-                    <small>Or sign in with credentials</small>
+                <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+                    <div class="text-blueGray-400 text-center mb-3 font-bold">
+                        <small>Or sign in with credentials</small>
+                    </div>
+                    <LoginForm/>
                 </div>
-                <LoginForm/>
             </div>
 
             <div class="flex flex-wrap mt-6 relative">
