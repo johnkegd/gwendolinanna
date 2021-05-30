@@ -2740,6 +2740,18 @@ select {
   padding-top: 0.5rem;
 }
 
+.pt-72 {
+  padding-top: 18rem;
+}
+
+.pt-80 {
+  padding-top: 20rem;
+}
+
+.pt-96 {
+  padding-top: 24rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }

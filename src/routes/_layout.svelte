@@ -6,11 +6,16 @@
 
 //	import Footer from '../components/Footer.svelte';
 	import Footer from '../components/Footers/Footer.svelte';
-	
+	console.log("segment: ", segment);
 </script>
-
-<NavbarAuthor/>
-<main>
-	<slot></slot>
-</main>
-<Footer />
+{#if segment != "auth"}
+	<NavbarAuthor/>
+		<main>
+			<slot></slot>
+		</main>
+	<Footer />
+{:else}
+	<main>
+		<slot></slot>
+	</main>
+{/if}

@@ -1,12 +1,13 @@
 <script>
+  import StarsPattern from "../../node_modules/images/stars.svg";
 </script>
 
 <style>
     /** BOY */
     figure {
-      --background: rgba(255, 255, 255, 1);
+      --background: rgb(25, 31, 40, 17%);
       --border: rgba(0, 0, 0, 0.125);
-      --eyes-mouth-bg:rgba(0, 0, 0, 0.5);
+      --eyes-mouth-bg: rgba(0, 0, 0, 0.5);
       --borderRadius: 0.125rem;
       --tshirt-neck-bg: 0;
       --bgColorS: 0%;
@@ -17,21 +18,22 @@
       --skinH: 30;
       --skinS: 100%;
       --skinL: 87%;
-      --hairL-bg: rgb(119, 52, 46);
-      --hairR-bg:rgb(109, 36, 31);
-/*       background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), 95%); */
+      --hairL-bg: rgb(107, 47, 41);
+      --hairR-bg: rgb(109, 36, 31);
+      /*       background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), 95%); */
       border: 1px solid rgba(0, 0, 0, 0.0625);
       border-radius: 50%;
       height: 0;
       margin: auto auto;
       margin-bottom: 2rem;
+      margin-top: 2rem;
       order: 1;
       padding-top: 60%;
       position: relative;
       width: 60%;
       overflow: hidden;
-      margin-top: 600px;
-      max-width: 60%;
+      background: var(--background);
+      background-size: 100px;
     }
     figure div {
       position: absolute;
@@ -48,7 +50,7 @@
       width: 60%;
       height: 60%;
       border-radius: 100%;
-      box-shadow: 0 -0.375rem 0 0.325rem var(--hairL-bg);
+      box-shadow: 0 -0.219rem 0 0.215rem var(--hairL-bg);
     }
     figure .ears {
       top: 47%;
@@ -63,7 +65,7 @@
       width: 1rem;
       height: 1rem;
       display: inline-block;
-      margin: 0 2.1rem;
+      margin: 0 2.9rem;
     }
     figure .head .eyes {
       top: 55%;
@@ -78,7 +80,7 @@
       width: 10px;
       height: 10px;
       display: inline-block;
-      margin: 0 1.5rem;
+      margin: 0 0.5rem;
       -webkit-animation: blink 3s infinite;
       animation: blink 3s infinite;
       transition: all 0.15s;
@@ -87,7 +89,7 @@
       border: 0.125rem solid transparent;
       border-bottom: 0.125rem solid var(--eyes-mouth-bg);
       width: 25%;
-      border-radius: 2%;
+      border-radius: 82%;
       transition: all 0.5s;
       top: 75%;
       left: 50%;
@@ -97,21 +99,33 @@
       top: 40%;
       left: 50%;
       width: 66.66%;
-      height: 69.66%;
-      border-radius: 39%;
+      height: 66.66%;
+      border-radius: 100%;
       overflow: hidden;
     }
     figure .hair::before {
       content: "";
       display: block;
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: 109%;
+      height: 97%;
       background: var(--hairL-bg);
-      border-radius: 50%;
-      top: -60%;
+      border-radius: 73%;
+      top: -57%;
       left: -50%;
-      box-shadow: 4rem 0 var(--hairR-bg);
+      box-shadow: 0rem 0 var(--hairR-bg);
+    }
+    figure .hair::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 97%;
+      background: var(--hairL-bg);
+      border-radius: 80%;
+      top: -52.5%;
+      left: 32%;
+      box-shadow: 2rem 0 var(--hairR-bg);
     }
     figure .neck {
       width: 10%;
@@ -144,8 +158,7 @@
       left: 52.5%;
       transform: skew(10deg) rotate(-15deg);
     }
-
-
+  
     @-webkit-keyframes blink {
       0%,
       90%,
@@ -166,11 +179,10 @@
         height: 0px;
       }
     }
-</style>
+  </style>
   
 
-
-<figure>
+<figure style="background-image:url({StarsPattern});">
   <div class="person-body" />
   <div class="neck skin" />
   <div class="head skin">
@@ -182,4 +194,3 @@
   <div class="shirt-1" />
   <div class="shirt-2" />
 </figure>
-

@@ -6,8 +6,8 @@
     import githubLogo from '../../node_modules/images/github.svg';
     import googleLogo from '../../node_modules/images/google.svg';
     import Nester from '../../components/Nester.svelte';
-    import Boy from '../../components/GraphicArts/Boy.svelte';
     import background from '../../node_modules/images/gwendi-art-default.png';
+
 </script>
 
 
@@ -20,35 +20,31 @@
  -->    
  
  <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full">
-    <Boy/>
  </div>
 
  <Nester clsChildrens="{["container mx-auto px-4 h-full","flex content-center items-center justify-center h-full"]}">
         <div class="w-full lg:w-4/12 px-4" slot="floor-1">
             <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
-                <SignOptions styles="rounded-t mb-0 px-6 py-6">
-                        <span slot="title">
-                            <h6 class="text-blueGray-500 text-sm font-bold">
-                                Sign in with
-                            </h6>
-                        </span>
-                        <span slot="buttons">
-                            <SignButton>
-                                <img alt="..." class="w-5 mr-1" src="{githubLogo}" />
-                                Github
-                            </SignButton>
-                            <SignButton>
-                                <img alt="..." class="w-5 mr-1" src="{googleLogo}" />
-                                Google
-                            </SignButton>
-                        </span>
-                </SignOptions>
                 <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                    <div class="text-blueGray-400 text-center mb-3 font-bold">
-                        <small>Or sign in with credentials</small>
-                    </div>
                     <LoginForm/>
+                   
                 </div>
+                <div class="text-blueGray-400 text-center mb-3 font-bold">
+                    
+                    <small>Or sign in with</small>
+                </div>
+                <SignOptions styles="rounded-t mb-0 px-6 py-6">
+                    <span slot="buttons">
+                        <SignButton>
+                            <img alt="..." class="w-5 mr-1" src="{githubLogo}" />
+                            Github
+                        </SignButton>
+                        <SignButton>
+                            <img alt="..." class="w-5 mr-1" src="{googleLogo}" />
+                            Google
+                        </SignButton>
+                    </span>
+            </SignOptions>
             </div>
 
             <div class="flex flex-wrap mt-6 relative">
