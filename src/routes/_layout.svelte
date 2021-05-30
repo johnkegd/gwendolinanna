@@ -4,9 +4,8 @@
 	import NavbarUser from ''; */
 	export let segment;
 
-//	import Footer from '../components/Footer.svelte';
 	import Footer from '../components/Footers/Footer.svelte';
-	console.log("segment: ", segment);
+	//console.log("segment: ", segment);
 </script>
 {#if segment != "auth"}
 	<NavbarAuthor/>

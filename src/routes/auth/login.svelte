@@ -7,7 +7,7 @@
     import googleLogo from '../../node_modules/images/google.svg';
     import Nester from '../../components/Nester.svelte';
     import background from '../../node_modules/images/gwendi-art-default.png';
-
+    import Fireworks from '../../components/GraphicArts/Fireworks.svelte';
 </script>
 
 
@@ -20,7 +20,8 @@
  -->    
  
  <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full">
- </div>
+    <Fireworks/>
+</div>
 
  <Nester clsChildrens="{["container mx-auto px-4 h-full","flex content-center items-center justify-center h-full"]}">
         <div class="w-full lg:w-4/12 px-4" slot="floor-1">
