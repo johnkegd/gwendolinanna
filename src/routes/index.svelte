@@ -7,10 +7,10 @@
 	import Separator from '../components/Separator.svelte';
 	import IconList from '../components/Lists/IconList.svelte';
 	import Li from '../components/Lists/ListItem.svelte';
-	import Icon from '../components/Icons/Icon.svelte';
 	import Image from '../components/Images.svelte';
 	import logo from "images/logo-2.svg";
 	import stars from "images/stars.svg";
+	import Nester from '../components/Nester.svelte';
 </script>
 
 <svelte:head>
@@ -34,41 +34,23 @@
       />
     </a>
   </div>
-  <div class="container relative mx-auto">
-    <div class="items-center flex flex-wrap">
-      <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-        <div class="pr-12">
-          <h1 class="text-white font-semibold text-5xl">
-            Your story begin here.
-          </h1>
-          <p class="mt-4 text-lg text-blueGray-200">
-            This is a simple example of a Landing Page you can build using Notus
-            Svelte. It features multiple CSS components based on the Tailwind
-            CSS design system.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-	<div
-		class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-		style="transform: translateZ(0);"
-	>
-		<svg
-		class="absolute bottom-0 overflow-hidden"
-		xmlns="http://www.w3.org/2000/svg"
-		preserveAspectRatio="none"
-		version="1.1"
-		viewBox="0 0 2560 100"
-		x="0"
-		y="0"
-		>
-		<polygon
-			class="text-blueGray-200 fill-current"
-			points="2560 0 2560 100 0 100"
-		/>
-		</svg>
-	</div>
+	<Nester clsChildrens="{["container relative mx-auto","items-center flex flex-wrap","w-full lg:w-6/12 px-4 ml-auto mr-auto text-center"]}">
+		<div slot="floor-2" class="pr-12">
+			<h1 class="text-white font-semibold text-5xl">
+				Your story begin here.
+			</h1>
+			<p class="mt-4 text-lg text-blueGray-200">
+				This is a simple example of a Landing Page you can build using Notus
+				Svelte. It features multiple CSS components based on the Tailwind
+				CSS design system.
+			</p>
+		</div>
+	</Nester>
+
+	<Separator 
+	wrapperStyles="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
+	polygonStyles="text-blueGray-200 fill-current"
+	/>
 </div>
 
 <!-- Card icons section-->
@@ -103,9 +85,8 @@
 		</CardIcon>
 		<div class="flex flex-wrap items-center mt-20">
 			<TextPromotion 
-				containerStyles="w-full md:w-5/12 px-4 mr-auto ml-auto"
+				styles="w-full md:w-5/12 px-4 mr-auto ml-auto"
 				iconType="fas fa-user-friends text-xl"
-				iconContainer="div"
 				iconStyles="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
 			>
 				<h3 class="text-3xl mb-2 font-semibold leading-normal">
@@ -138,8 +119,7 @@
 	
 	<div class="w-full md:w-5/12 ml-auto mr-auto px-4">
 		<TextPromotion
-			containerStyles="md:pr-12"
-			iconContainer="div"
+			styles="md:pr-12"
 			iconStyles="text-red-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-300"
 			iconType="fas fa-rocket text-xl"
 		>

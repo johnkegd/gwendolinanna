@@ -1,12 +1,20 @@
 <script>
 	import NavbarAuthor from '../components/Navbars/AuthNavbar.svelte';
-//	import Footer from '../components/Footer.svelte';
-import Footer from '../components/Footers/Footer.svelte';
-//	export let segment;
-</script>
+/* 	import NavbarLanding from '';
+	import NavbarUser from ''; */
+	export let segment;
 
-<NavbarAuthor/>
-<main>
-	<slot></slot>
-</main>
-<Footer />
+	import Footer from '../components/Footers/Footer.svelte';
+	//console.log("segment: ", segment);
+</script>
+{#if segment != "auth"}
+	<NavbarAuthor/>
+		<main>
+			<slot></slot>
+		</main>
+	<Footer />
+{:else}
+	<main>
+		<slot></slot>
+	</main>
+{/if}

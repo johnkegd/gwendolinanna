@@ -6,12 +6,15 @@
 	import {fade,fly, crossfade} from 'svelte/transition';
 	import {typewriter} from '../animations.js';
 	import {pagesData} from '../pagesData.js';
-	
 	export let segment;
 	let pagesIterator = Object.values(pagesData);
 	let currentPage = pagesData[segment||"home"];;
 	
-
+	const options = {
+		'home':'component1',
+		'gallery':'component2',
+		'otro':'component3'
+	}
 beforeUpdate(() => {
 	currentPage = pagesData[segment||"home"];
 });
@@ -73,7 +76,7 @@ nav ul:not(.indicators) li.active::before {
 </style>
 
 <nav class="nav-extended">
-	<div class="nav-background">
+	<div class="nav-background" on:scroll="">
 		<div class="pattern active" style="background-image: url({background})"></div>
 	</div>
 	  <div class="nav-wrapper container">

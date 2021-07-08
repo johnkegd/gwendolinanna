@@ -1,7 +1,7 @@
 <script>
 	export let status;
 	export let error;
-
+	import Section from '../components/Sections/SectionClean.svelte';
 	const dev = process.env.NODE_ENV === 'development';
 </script>
 
@@ -31,10 +31,20 @@
 	<title>{status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
 
-<p>{error.message}</p>
+<Section>
 
-{#if dev && error.stack}
-	<pre>{error.stack}</pre>
-{/if}
+	<div class="flex-auto px-4 lg:px-10 py-10 pt-0 text-center">
+		<h1>{status}</h1>
+
+		<p>{error.message}</p>
+	
+		{#if dev && error.stack}
+			<pre>{error.stack}</pre>
+		{/if}
+
+	</div>
+	
+</Section>
+
+
