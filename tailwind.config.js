@@ -4,6 +4,7 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   purge: {
     enabled: true,
+    mode: "all",
     content: [
       "./**/*.html",
       "./*.html",

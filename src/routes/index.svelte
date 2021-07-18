@@ -31,7 +31,7 @@
     />
     <a href="/">
       <img
-        class="absolute top-0 b-auto left-0 pt-0 sm:w-2/12 -mt-32 max-h-860-px"
+        class="absolute top-0 b-auto left-0 pt-0 -mt-32 max-h-860-px"
         src={logo}
         alt="Gwendolin Anna website"
       />
@@ -45,12 +45,12 @@
     ]}
   >
     <div slot="floor-2" class="pr-12">
-      <h1 class="text-white font-semibold text-5xl">Your story begin here.</h1>
-      <p class="mt-4 text-lg text-blueGray-200">
-        This is a simple example of a Landing Page you can build using Notus
-        Svelte. It features multiple CSS components based on the Tailwind CSS
-        design system.
-      </p>
+      <h1 class="text-white font-semibold text-5xl">Hi, i'm Gwendolin.</h1>
+      <h2 class="text-white font-semibold text-2xl">
+        student of computer science and draftswoman with a taste for
+        photography.
+      </h2>
+      <p class="mt-4 text-lg text-blueGray-200" />
     </div>
   </Nester>
 
@@ -67,60 +67,56 @@
   <div class="flex flex-wrap">
     <CardIcon
       cardStyles="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"
-      iconType="fas fa-award"
+      iconType="fas fa-camera-retro"
       iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
     >
-      <h6 class="text-xl font-semibold">Awarded Agency</h6>
+      <h3 class="text-xl font-semibold">Photography</h3>
       <p class="mt-2 mb-4 text-blueGray-500">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
+        Like a window in time, images are a form of immortalization.
       </p>
     </CardIcon>
     <CardIcon
       cardStyles="w-full md:w-4/12 px-4 text-center"
-      iconType="fas fa-retweet"
+      iconType="fas fa-paint-brush"
       iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
     >
-      <h6 class="text-xl font-semibold">Free Revisions</h6>
+      <h3 class="text-xl font-semibold">Art</h3>
       <p class="mt-2 mb-4 text-blueGray-500">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
+        Drawing and coloring is something I really enjoy, a world full of color.
       </p>
     </CardIcon>
     <CardIcon
       cardStyles="pt-6 w-full md:w-4/12 px-4 text-center"
-      iconType="fas fa-fingerprint"
+      iconType="fas fa-laptop-code"
       iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-500"
     >
-      <h6 class="text-xl font-semibold">Verified Company</h6>
+      <h3 class="text-xl font-semibold">Code</h3>
       <p class="mt-2 mb-4 text-blueGray-500">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
+        Creations brought to life by code, that's the final touch.
       </p>
     </CardIcon>
     <div class="flex flex-wrap items-center mt-20">
       <TextPromotion
         styles="w-full md:w-5/12 px-4 mr-auto ml-auto"
-        iconType="fas fa-user-friends text-xl"
+        iconType="fas fa-seedling text-xl"
         iconStyles="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
       >
         <h3 class="text-3xl mb-2 font-semibold leading-normal">
-          Working in it is a pleasure
+          Current work in progress.
         </h3>
         <p
           class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-          repellendus.
+          In this project I intend to implement the following technique.
         </p>
         <a href="/" class="font-bold text-blueGray-700 mt-8">
-          Lorem ipsum dolor sit amet.!
+          visit my art page.!
         </a>
       </TextPromotion>
       <CardImage
         cardImage={imagePlaceHolder}
-        cardTitle="Card title"
-        cardDescription="Qui occaecat sunt sunt ipsum velit duis voluptate consectetur labore do consequat."
+        cardTitle="The woman"
+        cardDescription="An accelerated time view of the project."
       />
     </div>
   </div>
@@ -142,10 +138,10 @@
       iconStyles="text-red-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-300"
       iconType="fas fa-rocket text-xl"
     >
-      <h3 class="text-3xl font-semibold">A growing company</h3>
+      <h3 class="text-3xl font-semibold">Highlights projects</h3>
       <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-        The extension comes with three pre-built pages to help you get started
-        faster. You can change the text and images and you're good to go.
+        Some of the following projects can be found in my store as NFT digital
+        arts.
       </p>
       <IconList listStyles="list-none mt-6">
         <Li

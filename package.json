@@ -10,27 +10,23 @@
     "build": "sapper build --legacy",
     "export": "npm run build:fontawesome && sapper export --legacy",
     "start": "node __sapper__/build",
+    "build:css": "NODE_ENV=production postcss src/assets/global.pcss -o static/assets/styles/global.css",
     "build:tailwind": "tailwind build static/assets/styles/index.css -o static/assets/styles/tailwind.css",
     "build:fontawesome": "mkdir -p static/assets/vendor/@fortawesome/fontawesome-free/webfonts && mkdir -p static/assets/vendor/@fortawesome/fontawesome-free/css && cp -a ./node_modules/@fortawesome/fontawesome-free/webfonts static/assets/vendor/@fortawesome/fontawesome-free/ && cp ./node_modules/@fortawesome/fontawesome-free/css/all.min.css static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf __sapper__/ && npm install && npm run build:fontawesome && npm run dev"
   },
   "dependencies": {
-    "compression": "^1.7.1",
-    "polka": "next",
-    "sirv": "^1.0.0",
-    "sirv-cli": "1.0.11",
     "@fortawesome/fontawesome-free": "5.15.3",
     "@popperjs/core": "2.9.1",
     "@rollup/plugin-alias": "3.1.2",
     "@tailwindcss/forms": "0.2.1",
     "chart.js": "2.9.4",
-    "tailwindcss": "2.0.4"
+    "compression": "^1.7.1",
+    "polka": "next",
+    "sirv": "^1.0.0",
+    "sirv-cli": "1.0.11"
   },
   "devDependencies": {
-    "sapper": "^0.28.0",
-    "svelte": "^3.17.3",
-    "autoprefixer": "10.2.5",
-    "postcss": "8.2.8",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
@@ -44,6 +40,9 @@
     "rollup": "^2.3.4",
     "rollup-plugin-livereload": "2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0"
+    "rollup-plugin-terser": "^7.0.0",
+    "sapper": "^0.28.0",
+    "svelte": "^3.17.3",
+    "tailwindcss": "^2.2.4"
   }
 }
