@@ -8,57 +8,12 @@
   import IconList from "../components/Lists/IconList.svelte";
   import Li from "../components/Lists/ListItem.svelte";
   import Image from "../components/Images.svelte";
-  import logo from "images/logo-2.svg";
-  import stars from "images/stars.svg";
-  import Nester from "../components/Nester.svelte";
   import Carousel from "../components/Carousel/Carousel.svelte";
 </script>
 
 <svelte:head>
   <title>Gwendolin Home</title>
 </svelte:head>
-<!--TODO: Split in components to header by page-->
-<div
-  class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
->
-  <div
-    class="absolute top-0 w-full h-full bg-center bg-cover"
-    style="background-image: url({stars});"
-  >
-    <span
-      id="blackOverlay"
-      class="w-full h-full absolute opacity-75 bg-black"
-    />
-    <a href="/">
-      <img
-        class="absolute top-0 b-auto left-0 pt-0 -mt-32 max-h-860-px"
-        src={logo}
-        alt="Gwendolin Anna website"
-      />
-    </a>
-  </div>
-  <Nester
-    clsChildrens={[
-      "container relative mx-auto",
-      "items-center flex flex-wrap",
-      "w-full lg:w-6/12 px-4 ml-auto mr-auto text-center",
-    ]}
-  >
-    <div slot="floor-2" class="pr-12">
-      <h1 class="text-white font-semibold text-5xl">Hi, i'm Gwendolin.</h1>
-      <h2 class="text-white font-semibold text-2xl">
-        student of computer science and draftswoman with a taste for
-        photography.
-      </h2>
-      <p class="mt-4 text-lg text-blueGray-200" />
-    </div>
-  </Nester>
-
-  <Separator
-    wrapperStyles="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-    polygonStyles="text-blueGray-200 fill-current"
-  />
-</div>
 
 <!-- Card icons section-->
 <Section sectionStyles="pb-20 bg-blueGray-200 -mt-24">
@@ -153,8 +108,9 @@
       </IconList>
     </TextPromotion>
   </div>
-  <Carousel />
-</Section>
+  <!--   <Carousel />
+ --></Section
+>
 <!-- Contact section -->
 <Section
   sectionStyles="pb-20 relative block bg-blueGray-800"
