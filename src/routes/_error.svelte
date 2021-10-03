@@ -9,7 +9,9 @@
 
   onMount(() => {
     var header = document.getElementById("header");
+    var footer = document.getElementById("footer");
     header.classList.add("hidden");
+    footer.classList.add("hidden");
   });
 </script>
 

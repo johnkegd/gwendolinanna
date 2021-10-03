@@ -13,7 +13,9 @@
 
   beforeUpdate(() => {
     var header = document.getElementById("header");
+    var footer = document.getElementById("footer");
     header.classList.remove("hidden");
+    footer.classList.remove("hidden");
   });
 
   console.log("segment: ", segment);
