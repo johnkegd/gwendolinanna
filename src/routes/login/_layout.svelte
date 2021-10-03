@@ -1,10 +1,9 @@
 <script>
-  import AuthNavbar from "../../components/Navbars/AuthNavbar.svelte";
-  export let segment;
+  import LoginNavbar from "../../components/Navbars/LoginNavbar.svelte";
   import AuthFooter from "../../components/Footers/AuthFooter.svelte";
 </script>
 
-<AuthNavbar />
+<LoginNavbar />
 <main>
   <slot />
 </main>

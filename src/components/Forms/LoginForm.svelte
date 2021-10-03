@@ -1,20 +1,33 @@
 <script>
-  import FormPart from "./Parts/LoginFormPart.svelte";
   import BoyGrapicArt from "../GraphicArts/Boy.svelte";
 
-  var email;
-  var password;
+  var email = "john@gwendolinanna.com";
+  var password = "12345678";
+  var result;
 
-  function handleLogin() {
-    if (email && password) {
-      console.log("send request", email, password);
-    } else {
-      console.log("empty values", email, password);
-    }
+  async function submit() {
+    const res = await fetch("http://localhost:8889/auth/users/login", {
+      method: "POST",
+      body: JSON.stringify({ email: email, password: password }),
+    });
+    const Authorization = await res.headers.get("Authorization");
+    result = JSON.stringify(Authorization);
   }
+
+  async function getItem() {
+    const resp = await fetch("/user.json", {
+      headers: {
+        email,
+        password,
+      },
+    });
+    const result = await resp;
+    console.log(result);
+  }
+  console.log(result);
 </script>
 
-<form>
+<form on:submit={submit}>
   <BoyGrapicArt />
 
   <div class="relative w-full mb-3">
@@ -28,6 +41,7 @@
       class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
       placeholder="Email"
       autocomplete="username"
+      bind:value={email}
     />
   </div>
 
@@ -42,6 +56,7 @@
       class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
       autocomplete="current-password"
       placeholder="Password"
+      bind:value={password}
     />
   </div>
 
@@ -60,11 +75,18 @@
 
   <div class="text-center mt-6">
     <button
-      on:click={handleLogin}
-      class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-      type="button"
+      class="bg-blueGray-800 text-white focus:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+      type="submit"
+      value="Sign In"
     >
       Sign In
+    </button>
+    <button
+      class="bg-blueGray-800 text-white focus:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+      type="botton"
+      on:click|preventDefault={getItem}
+    >
+      Get data
     </button>
   </div>
 </form>
