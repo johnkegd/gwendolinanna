@@ -17,21 +17,47 @@
 <form>
   <BoyGrapicArt />
 
-  <FormPart inputType="Email" bind:value={email} labelForId="grid-email" />
+  <div class="relative w-full mb-3">
+    <label
+      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+      for="grid-email"
+    />
+    <input
+      id="grid-email"
+      type="email"
+      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+      placeholder="Email"
+      autocomplete="username"
+    />
+  </div>
 
-  <FormPart
-    inputType="Password"
-    bind:value={password}
-    labelForId="grid-password"
-  />
+  <div class="relative w-full mb-3">
+    <label
+      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+      for="grid-password"
+    />
+    <input
+      id="grid-password"
+      type="password"
+      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+      autocomplete="current-password"
+      placeholder="Password"
+    />
+  </div>
 
-  <FormPart
-    inputType="checkbox"
-    labelForId="customCheckLogin"
-    styles="inline-flex items-center cursor-pointer"
-  >
-    Remember me
-  </FormPart>
+  <div>
+    <label class="relative w-full mb-3">
+      <input
+        id="customCheckLogin"
+        type="checkbox"
+        class="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"
+      />
+      <span class="ml-2 text-sm font-semibold text-blueGray-600">
+        Remember me
+      </span>
+    </label>
+  </div>
+
   <div class="text-center mt-6">
     <button
       on:click={handleLogin}

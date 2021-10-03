@@ -109,8 +109,8 @@
     </TextPromotion>
   </div>
   <!--   <Carousel />
- --></Section
->
+ -->
+</Section>
 <!-- Contact section -->
 <Section
   sectionStyles="pb-20 relative block bg-blueGray-800"
