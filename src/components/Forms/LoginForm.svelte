@@ -27,20 +27,22 @@
   console.log(result);
 </script>
 
-<form on:submit={submit}>
+<form action="/session" accept-charset="UTF-8" method="POST">
   <BoyGrapicArt />
 
   <div class="relative w-full mb-3">
     <label
       class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-      for="grid-email"
+      for="login_field"
     />
     <input
-      id="grid-email"
+      id="login_field"
+      autocapitalize="off"
+      autocorrect="off"
+      autocomplete="username"
       type="email"
       class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
       placeholder="Email"
-      autocomplete="username"
       bind:value={email}
     />
   </div>
@@ -48,10 +50,11 @@
   <div class="relative w-full mb-3">
     <label
       class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-      for="grid-password"
+      for="password"
     />
     <input
-      id="grid-password"
+      id="password"
+      name="password"
       type="password"
       class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
       autocomplete="current-password"
@@ -74,13 +77,15 @@
   </div>
 
   <div class="text-center mt-6">
-    <button
+    <input
       class="bg-blueGray-800 text-white focus:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
       type="submit"
+      name="commit"
       value="Sign In"
-    >
-      Sign In
-    </button>
+      data-disable-with="Signing in..."
+      data-sso-label="Sign in with your identity provider"
+      data-signin-label="Sign in"
+    />
     <button
       class="bg-blueGray-800 text-white focus:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
       type="botton"
