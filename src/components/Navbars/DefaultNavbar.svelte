@@ -1,5 +1,5 @@
 <script>
-  import PagesDropdown from "../Dropdowns/PagesDropdown.svelte";
+  import Menu from "@johnkegd/menu";
   import logo from "../../node_modules/images/logo-2.svg";
   let navbarOpen = false;
   function setNavbarOpen() {
@@ -56,7 +56,7 @@
       </ul>
       <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
         <li class="flex items-center">
-          <PagesDropdown />
+          <Menu />
         </li>
         <li class="flex items-center">
           <a

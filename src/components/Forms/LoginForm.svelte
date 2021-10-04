@@ -1,10 +1,12 @@
 <script>
-  import BoyGrapicArt from "../GraphicArts/Boy.svelte";
+  import { Boy } from "@johnkegd/graphicArts";
+  import StarsPattern from "../../node_modules/images/stars.svg";
 
-  var email = "john@gwendolinanna.com";
-  var password = "12345678";
+  var email;
+  var password;
   var result;
 
+  // only test purpose
   async function submit() {
     const res = await fetch("http://localhost:8889/auth/users/login", {
       method: "POST",
@@ -27,8 +29,9 @@
   console.log(result);
 </script>
 
+<!-- TODO: connect api from form post action in session path-->
 <form action="/session" accept-charset="UTF-8" method="POST">
-  <BoyGrapicArt />
+  <Boy {StarsPattern} />
 
   <div class="relative w-full mb-3">
     <label

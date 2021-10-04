@@ -1,5 +1,4 @@
 <script>
-  import PagesDropdown from "../Dropdowns/PagesDropdown.svelte";
   import logo from "../../node_modules/images/logo-2.svg";
   let navbarOpen = false;
   function setNavbarOpen() {

@@ -1,7 +1,7 @@
 <script>
   // make dynamic date to be added to footer
   let date = new Date().getFullYear();
-  import Separator from "../Separator.svelte";
+  import Separator from "@johnkegd/separator";
 </script>
 
 <footer class="relative bg-blueGray-200 pt-8 pb-6" id="footer">
