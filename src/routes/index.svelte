@@ -4,7 +4,7 @@
   import imagePlaceHolder from "../node_modules/images/example-500x500.jpg";
   import TextPromotion from "../components/TextContainers/TextPromotion.svelte";
   import Section from "../components/Sections/Section.svelte";
-  import Separator from "@johnkegd/separator";
+  import Separator from "../components/Separator.svelte";
   import IconList from "../components/Lists/IconList.svelte";
   import Li from "../components/Lists/ListItem.svelte";
   import Image from "../components/Images.svelte";

@@ -1,6 +1,6 @@
 <script>
   import imagePlaceHolder from "../../node_modules/images/example-250x250.jpg";
-  import Separator from "@johnkegd/separator";
+  import Separator from "../Separator.svelte";
   export let cardTitle;
   export let cardDescription;
   export let cardImage = imagePlaceHolder;
@@ -14,7 +14,6 @@
     <img alt="..." src={cardImage} class="w-full align-middle rounded-t-lg" />
     <blockquote class="relative p-8 mb-4">
       <Separator
-        wrapper="false"
         svgStyles="absolute left-0 w-full block h-95-px -top-94-px"
         svgViewBox="0 0 583 95"
         polygonStyles="text-teal-800 fill-current"

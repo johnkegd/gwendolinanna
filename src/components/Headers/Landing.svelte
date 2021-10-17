@@ -1,6 +1,6 @@
 <script>
   import Nester from "../Nester.svelte";
-  import Separator from "@johnkegd/separator";
+  import Separator from "../Separator.svelte";
   export let backgroundImage;
   export let logo;
 </script>

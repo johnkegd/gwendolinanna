@@ -1,9 +1,9 @@
 <script>
-  import { Boy } from "@johnkegd/graphicArts";
+  import { Boy } from "@johnkegd/graphicarts";
   import StarsPattern from "../../node_modules/images/stars.svg";
 
-  var email;
-  var password;
+  var email = "john@gwendolinanna.com";
+  var password = "12345678";
   var result;
 
   // only test purpose
@@ -16,17 +16,14 @@
     result = JSON.stringify(Authorization);
   }
 
-  async function getItem() {
-    const resp = await fetch("/user.json", {
-      headers: {
-        email,
-        password,
-      },
+  async function testSubmit() {
+    const resp = await fetch("http://192.168.0.112:8888/auth/users/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
     });
-    const result = await resp;
-    console.log(result);
+    let userId = resp.headers.get("UserID");
+    const resp2 = await fetch("http://192.168.0.112:8888/auth/users/" + userId);
   }
-  console.log(result);
 </script>
 
 <!-- TODO: connect api from form post action in session path-->
@@ -43,6 +40,7 @@
       autocapitalize="off"
       autocorrect="off"
       autocomplete="username"
+      name="email"
       type="email"
       class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
       placeholder="Email"
@@ -83,7 +81,6 @@
     <input
       class="bg-blueGray-800 text-white focus:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
       type="submit"
-      name="commit"
       value="Sign In"
       data-disable-with="Signing in..."
       data-sso-label="Sign in with your identity provider"
@@ -92,7 +89,7 @@
     <button
       class="bg-blueGray-800 text-white focus:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
       type="botton"
-      on:click|preventDefault={getItem}
+      on:click|preventDefault={testSubmit}
     >
       Get data
     </button>

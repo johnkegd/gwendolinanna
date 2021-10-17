@@ -1,6 +1,6 @@
 <script>
   import Icon from "../Icons/Icon.svelte";
-  import Separator from "@johnkegd/separator";
+  import Separator from "../Separator.svelte";
   import Image from "../Images.svelte";
   import IconList from "../Lists/IconList.svelte";
   import Li from "../Lists/ListItem.svelte";
