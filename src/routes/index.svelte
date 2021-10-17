@@ -8,7 +8,6 @@
   import IconList from "../components/Lists/IconList.svelte";
   import Li from "../components/Lists/ListItem.svelte";
   import Image from "../components/Images.svelte";
-  import Carousel from "../components/Carousel/Carousel.svelte";
 </script>
 
 <svelte:head>

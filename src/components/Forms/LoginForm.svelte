@@ -2,8 +2,8 @@
   import { Boy } from "@johnkegd/graphicarts";
   import StarsPattern from "../../node_modules/images/stars.svg";
 
-  var email = "john@gwendolinanna.com";
-  var password = "12345678";
+  var email;
+  var password;
   var result;
 
   // only test purpose
