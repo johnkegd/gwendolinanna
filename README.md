@@ -12,11 +12,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://dev-gwendolin.netlify.app">
-    <img src="https://media.giphy.com/media/U1UTmQ0wST31rQT5wE/giphy.gif" alt="Logo" width="80" height="80">
+  <a href="https://gwendolinanna.com">
+    <img src="https://dev.gwendolinanna.com/client/9b501d8fd378ada7.svg" alt="Logo" width="250" height="250">
   </a>
 
-  <h3 align="center">Gwendolin Web aplication</h3>
+  <h3 align="center">Gwendolin portal</h3>
 
   <p align="center">
     An awesome and powerful personal website to jumpstart your dreams!
@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://none.com)
+[![Product Name Screen Shot][product-screenshot]](https://dev.gwendolinanna.com)
 
 This's a gift for my beatiful girldfriend Gwendolin birthday and as well an start point to give a bit of powerful with this tool to make her ideas to fly in internet and as well in her own web site app, powered by new tecnology and with a lot of love
 by: Johnkegd
@@ -87,11 +87,10 @@ To create an optimised version of the app:
 npm run build
 ```
 
-# Plan frameworks usage
+# Frameworks and Tools
 * [JQuery](https://jquery.com)
-* [Materialize](https://laravel.com)
-optional 
-* [Bootstrap](https://getbootstrap.com)
+* [Tailwind](https://tailwind.com)
+* [Svelte](https://svelte.dev)
 
 
 
@@ -106,8 +105,8 @@ To get a local copy up and running follow these simple example steps.
 Install the dependencies...
 
 ```bash
-cd svelte-app
-npm install
+cd gwendolin-app
+npm install && build:fontawesome
 ```
 
 ...then start [Rollup](https://rollupjs.org):
@@ -153,19 +152,16 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
-
-Project Link: [https://github.com/gwendolin/app](https://github.com/gwendolin/app)
+johnkegd@gmail.com
+Project Link: [https://github.com/gwendolin](https://github.com/gwendolin)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
 * [Font Awesome](https://fontawesome.com)
+* [Netlify](https://netlify.com)
+* [Svelte](https://svelte.dev)
+* [Sapper](https://sapper.dev)
