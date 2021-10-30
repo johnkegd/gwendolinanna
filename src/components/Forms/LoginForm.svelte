@@ -1,5 +1,5 @@
 <script>
-  import { Boy } from "@johnkegd/graphicarts";
+  import { Boy, Fireworks } from "@johnkegd/graphicarts";
   import StarsPattern from "../../node_modules/images/stars.svg";
 
   var email;
@@ -17,18 +17,19 @@
   }
 
   async function testSubmit() {
-    const resp = await fetch("http://192.168.0.112:8888/auth/users/login", {
+    const resp = await fetch("http://192.168.0.112:8889/auth/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
     });
     let userId = resp.headers.get("UserID");
-    const resp2 = await fetch("http://192.168.0.112:8888/auth/users/" + userId);
+    const resp2 = await fetch("http://192.168.0.112:8889/auth/users/" + userId);
   }
 </script>
 
 <!-- TODO: connect api from form post action in session path-->
 <form action="/session" accept-charset="UTF-8" method="POST">
   <Boy {StarsPattern} />
+  <Fireworks />
 
   <div class="relative w-full mb-3">
     <label
