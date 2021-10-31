@@ -14,9 +14,21 @@
 {#if wrapper === true}
   <div
     class={wrapperStyles}
-    component="tiene wrapper"
+    component="separator-wrapper"
     style="{wrapperInLine};"
-  />
+  >
+    <svg
+      class={svgStyles}
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+      version="1.1"
+      viewBox={svgViewBox}
+      x={svgX}
+      y={svgY}
+    >
+      <polygon class={polygonStyles} points={polygonPoints} />
+    </svg>
+  </div>
 {:else}
   <svg
     class={svgStyles}

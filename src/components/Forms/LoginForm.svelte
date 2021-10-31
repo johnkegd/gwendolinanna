@@ -29,8 +29,6 @@
 <!-- TODO: connect api from form post action in session path-->
 <form action="/session" accept-charset="UTF-8" method="POST">
   <Boy {StarsPattern} />
-  <Fireworks />
-
   <div class="relative w-full mb-3">
     <label
       class="block uppercase text-blueGray-600 text-xs font-bold mb-2"

@@ -1,6 +1,8 @@
 <script>
   import CardIcon from "../components/Cards/CardIcon.svelte";
   import CardImage from "../components/Cards/CardImage.svelte";
+  import Card from "../components/Cards/Card.svelte";
+  import Icon from "../components/Icons/Icon.svelte";
   import imagePlaceHolder from "../node_modules/images/example-500x500.jpg";
   import TextPromotion from "../components/TextContainers/TextPromotion.svelte";
   import Section from "../components/Sections/Section.svelte";
@@ -8,6 +10,11 @@
   import IconList from "../components/Lists/IconList.svelte";
   import Li from "../components/Lists/ListItem.svelte";
   import Image from "../components/Images.svelte";
+  /* 
+  let sec;
+  $: if (sec) {
+    console.log("section: ", sec);
+  } */
 </script>
 
 <svelte:head>
@@ -19,39 +26,32 @@
   <!-- <div slot="head-section"> outside the inner container </div> -->
   <!-- <div slot="footer-section"> outside the inner container bottom area</div> -->
   <div class="flex flex-wrap">
-    <CardIcon
-      cardStyles="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"
-      iconType="fas fa-camera-retro"
-      iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
-    >
+    <Card class="lg:pt-12 pt-6">
+      <Icon type="fas fa-camera-retro" class="bg-red-400" />
       <h3 class="text-xl font-semibold">Photography</h3>
       <p class="mt-2 mb-4 text-blueGray-500">
         Like a window in time, images are a form of immortalization.
       </p>
-    </CardIcon>
-    <CardIcon
-      cardStyles="w-full md:w-4/12 px-4 text-center"
-      iconType="fas fa-paint-brush"
-      iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
-    >
+    </Card>
+    <Card>
+      <Icon class="bg-emerald-400" type="fas fa-paint-brush" />
       <h3 class="text-xl font-semibold">Art</h3>
       <p class="mt-2 mb-4 text-blueGray-500">
         Drawing and coloring is something I really enjoy, a world full of color.
       </p>
-    </CardIcon>
-    <CardIcon
-      cardStyles="pt-6 w-full md:w-4/12 px-4 text-center"
-      iconType="fas fa-laptop-code"
-      iconStyles="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-500"
-    >
+    </Card>
+    <Card class="pt-6">
+      <Icon class="bg-purple-500" type="fas fa-laptop-code" />
+
       <h3 class="text-xl font-semibold">Code</h3>
       <p class="mt-2 mb-4 text-blueGray-500">
         Creations brought to life by code, that's the final touch.
       </p>
-    </CardIcon>
+    </Card>
+
     <div class="flex flex-wrap items-center mt-20">
       <TextPromotion
-        styles="w-full md:w-5/12 px-4 mr-auto ml-auto"
+        class="w-full md:w-5/12 px-4 mr-auto ml-auto"
         iconType="fas fa-seedling text-xl"
         iconStyles="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
       >
@@ -71,6 +71,7 @@
         cardImage={imagePlaceHolder}
         cardTitle="The woman"
         cardDescription="An accelerated time view of the project."
+        type="gla"
       />
     </div>
   </div>
@@ -88,7 +89,7 @@
 
   <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
     <TextPromotion
-      styles="md:pr-12"
+      class="md:pr-12"
       iconStyles="text-red-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-300"
       iconType="fas fa-rocket text-xl"
     >

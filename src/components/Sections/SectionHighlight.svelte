@@ -25,7 +25,8 @@
         <div class="md:pr-12">
           <Icon
             container="div"
-            containerStyles="text-red-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-300"
+            color="text-red-600"
+            class=" w-16 h-16 mb-6 bg-red-300"
             type="fas fa-rocket text-xl"
           />
           <h3 class="text-3xl font-semibold">A growing company</h3>

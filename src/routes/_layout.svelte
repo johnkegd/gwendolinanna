@@ -1,22 +1,15 @@
 <script>
   import DefaultNavbar from "../components/Navbars/DefaultNavbar.svelte";
-  /* 	import NavbarLanding from '';
-import NavbarUser from ''; */
   import DefaultHeader from "../components/Headers/Landing.svelte";
   import Footer from "../components/Footers/Footer.svelte";
   import logo from "images/logo-2.svg";
   import stars from "images/stars.svg";
-
   export let segment;
-  /*  beforeUpdate(() => {
-      var header = document.getElementById("header");
-      var footer = document.getElementById("footer");
-      header.classList.remove("hidden");
-      footer.classList.remove("hidden");
-    }); */
+
+  let noHead = ["login", "about"];
 </script>
 
-{#if segment != "login"}
+{#if !noHead.includes(segment)}
   <DefaultNavbar />
   <DefaultHeader backgroundImage={stars} {logo}>
     <h1 class="text-white font-semibold text-5xl">Hi, i'm Gwendolin.</h1>

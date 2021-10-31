@@ -48,9 +48,20 @@
             href="/"
           >
             <i
-              class="lg:text-blueGray-200 text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2"
+              class="lg:text-blueGray-200 text-blueGray-400 fas fa-palette text-lg leading-lg mr-2"
             />
-            Docs
+            Gallery
+          </a>
+        </li>
+        <li class="flex items-center">
+          <a
+            class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+            href="/about"
+          >
+            <i
+              class="lg:text-blueGray-200 text-blueGray-400 text-lg leading-lg mr-2"
+            />
+            About
           </a>
         </li>
       </ul>
