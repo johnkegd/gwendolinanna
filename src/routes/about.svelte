@@ -153,9 +153,7 @@
   <div class="container text-center">text</div>
   {#each Array(3) as a, i}
     {#if i == 1}
-      <Card>
-        <Icon class="bg-red-300" />
-      </Card>
+      <Card />
     {:else}
       <Card />
     {/if}

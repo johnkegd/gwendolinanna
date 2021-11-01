@@ -5,13 +5,18 @@
   export let cardDescription;
   export let cardImage = imagePlaceHolder;
   export let cardDescriptionBackground = "bg-blueGray-800";
+  export { clazz as class };
+  let clazz = "";
 </script>
 
-<div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-  <div
-    class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg {cardDescriptionBackground}"
-  >
-    <img alt="..." src={cardImage} class="w-full align-middle rounded-t-lg" />
+<div
+  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg {cardDescriptionBackground}"
+>
+  <slot name="image" />
+  <slot>
+    {#if !$$slots.image}
+      <img alt="..." src={cardImage} class="w-full align-middle rounded-t-lg" />
+    {/if}
     <blockquote class="relative p-8 mb-4">
       <Separator
         svgStyles="absolute left-0 w-full block h-95-px -top-94-px"
@@ -24,5 +29,5 @@
         {cardDescription}
       </p>
     </blockquote>
-  </div>
+  </slot>
 </div>

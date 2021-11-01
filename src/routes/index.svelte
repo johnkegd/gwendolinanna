@@ -131,24 +131,16 @@
   </div>
 
   <div class="flex flex-wrap mt-12 justify-center">
-    <CardIcon
-      noBg="true"
-      cardStyles="w-full lg:w-3/12 px-4 text-center"
-      iconType="fas fa-medal text-xl"
-      iconStyles="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-    >
+    <Card CLASS="w-full lg:w-3/12 px-4 text-center" type="transparent">
+      <Icon container="div" type="fas fa-medal text-xl" />
       <h6 class="text-xl mt-5 font-semibold text-white">Excelent Services</h6>
       <p class="mt-2 mb-4 text-blueGray-400">
         Some quick example text to build on the card title and make up the bulk
         of the card's content.
       </p>
-    </CardIcon>
-    <CardIcon
-      noBg="true"
-      cardStyles="w-full lg:w-3/12 px-4 text-center"
-      iconType="fas fa-poll text-xl"
-      iconStyles="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-    >
+    </Card>
+    <Card CLASS="w-full lg:w-3/12 px-4 text-center" type="transparent">
+      <Icon container="div" type="fas fa-poll text-xl" />
       <h6 class="text-xl mt-5 font-semibold text-white">
         Grow your creativity
       </h6>
@@ -156,18 +148,14 @@
         Some quick example text to build on the card title and make up the bulk
         of the card's content.
       </p>
-    </CardIcon>
-    <CardIcon
-      noBg="true"
-      cardStyles="w-full lg:w-3/12 px-4 text-center"
-      iconType="fas fa-lightbulb text-xl"
-      iconStyles="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-    >
+    </Card>
+    <Card CLASS="w-full lg:w-3/12 px-4 text-center" type="transparent">
+      <Icon container="div" type="fas fa-poll text-xl" />
       <h6 class="text-xl mt-5 font-semibold text-white">Launch time</h6>
       <p class="mt-2 mb-4 text-blueGray-400">
         Some quick example text to build on the card title and make up the bulk
         of the card's content.
       </p>
-    </CardIcon>
+    </Card>
   </div>
 </Section>
