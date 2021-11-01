@@ -67,12 +67,7 @@
           visit my art page.!
         </a>
       </TextPromotion>
-      <CardImage
-        cardImage={imagePlaceHolder}
-        cardTitle="The woman"
-        cardDescription="An accelerated time view of the project."
-        type="gla"
-      />
+      <Card type="image" />
     </div>
   </div>
 </Section>

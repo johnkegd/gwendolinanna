@@ -1,8 +1,5 @@
 <script>
   import Section from "../components/Sections/SectionTest.svelte";
-  import CardIcon from "../components/Cards/CardIcon.svelte";
-  import CardImage from "../components/Cards/CardImage.svelte";
-  import TextPromotion from "../components/TextContainers/TextPromotion.svelte";
   import imgPlaceholder from "../node_modules/images/gwendolin.jpg";
   import DefaultNavbar from "../components/Navbars/DefaultNavbar.svelte";
   import Card from "../components/Cards/Card.svelte";
